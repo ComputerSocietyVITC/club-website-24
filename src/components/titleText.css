@@ -1,0 +1,14 @@
+.title {
+    font-family: Inter;
+    display: inline-block;
+    font-size: 113.92px;
+    font-weight: 800;
+    line-height: 137.87px;
+    text-align: left;
+    color: #31CF9F;
+}
+
+.title-text {
+    display: inline-block;
+    color: white;
+}
