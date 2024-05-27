@@ -3,3 +3,45 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.custom-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  
+}
+
+.custom-underline:hover::after {
+    left: 20%;
+    bottom: -2px;
+    width: 55%;
+    height: 2px;
+    background-color: #10b981;
+    transition: width 0.3s ease-in-out;
+}
+.icon {
+  fill: black;
+  stroke: white;
+  stroke-width: 20;
+}
+
+/* index.css */
+.custom-underline-gradient {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-underline-gradient::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  background: linear-gradient(to right, green, yellow);
+  position: absolute;
+  bottom: -2px; /* Adjust the distance from the text */
+  left: 0;
+}
