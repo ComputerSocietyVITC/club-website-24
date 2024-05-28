@@ -1,11 +1,7 @@
 import React from "react";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import mainImage from '../919b5ab249d5ff6d71e17d3c986fc8ec.jpeg'; // Adjust the path
-import image1 from '../919b5ab249d5ff6d71e17d3c986fc8ec.jpeg'; // Adjust the path
-import image2 from '../c23c949ca0973b7475d89199ea5dbe08.jpeg'; // Adjust the path
-import image3 from '../d2cb28fa32e18598ebb1207c9d3681b3.jpeg'; // Adjust the path
-import image4 from '../d2cb28fa32e18598ebb1207c9d3681b3.jpeg'; // Adjust the path
+import image1 from '../1-min.jpeg'; // Adjust the path
+import image2 from '../2-min.jpeg'; // Adjust the path
+import image4 from '../3-min.jpeg'; // Adjust the path
 
 const Homepage = () => {
     return (
@@ -44,3 +40,4 @@ const Homepage = () => {
 };
 
 export default Homepage;
+git 
