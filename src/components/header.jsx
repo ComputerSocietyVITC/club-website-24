@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../ICON.png'; // Adjust the path to your image
-
 const Header = () => {
   return (
     <header className="bg-slate-950 text-white p-4 shadow-md">
@@ -18,7 +17,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/events"
+                href='/events'
                 className="custom-underline"
               >
                 Events
