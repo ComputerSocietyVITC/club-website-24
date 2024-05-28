@@ -22,23 +22,16 @@ const Homepage = () => {
                     </div>
                     <div className="md:col-span-1 flex justify-center items-center mr-24">
                         <div className="relative w-full max-w-lg flex justify-center items-center">
-                            {/* Center Image */}
                             <img src={image4} alt="Main Event" className="w-80 h-80 rounded-full object-cover" />
-                            {/* First Border Circle */}
                             <div className="absolute border-4 border-green-400 rounded-full" style={{ width: 'calc(16rem + 200px)', height: 'calc(16rem + 200px)' }}></div>
-                            {/* Second Border Circle */}
                             <div className="absolute border-2 border-gray-500 rounded-full" style={{ width: 'calc(18rem + 240px)', height: 'calc(18rem + 240px)' }}></div>
-                            {/* Third Border Circle */}
                             <div className="absolute border-2 border-gray-700 rounded-full" style={{ width: 'calc(20rem + 280px)', height: 'calc(20rem + 280px)' }}></div>
-                            {/* Top Image */}
                             <div className="absolute w-20 h-20 rounded-full flex items-center justify-center" style={{ top: '-100px', left: '50%', transform: 'translateX(-50%)' }}>
                                 <img src={image1} alt="Event 1" className="w-full h-full rounded-full object-cover" />
                             </div>
-                            {/* Right Image */}
                             <div className="absolute w-20 h-20 rounded-full flex items-center justify-center" style={{ top: '50%', right: '-55px', transform: 'translateY(-50%)' }}>
                                 <img src={image2} alt="Event 2" className="w-full h-full rounded-full object-cover" />
                             </div>
-                            {/* Left Image */}
                             <div className="absolute w-20 h-20 rounded-full flex items-center justify-center" style={{ top: '50%', left: '-55px', transform: 'translateY(-50%)' }}>
                                 <img src={image4} alt="Event 4" className="w-full h-full rounded-full object-cover" />
                             </div>
