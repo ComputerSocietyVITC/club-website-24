@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.269b3a03.css",
-    "main.js": "/static/js/main.cfa915d8.js",
-    "static/js/453.ef698098.chunk.js": "/static/js/453.ef698098.chunk.js",
-    "static/media/1-min.jpeg": "/static/media/1-min.372d421a796c1972f572.jpeg",
-    "static/media/2-min.jpeg": "/static/media/2-min.c95aa2420e3d0536b498.jpeg",
-    "static/media/3-min.jpeg": "/static/media/3-min.1151aea115ae78d630af.jpeg",
-    "static/media/ICON.png": "/static/media/ICON.b13e30676b097eec3da1.png",
-    "index.html": "/index.html",
-    "main.269b3a03.css.map": "/static/css/main.269b3a03.css.map",
-    "main.cfa915d8.js.map": "/static/js/main.cfa915d8.js.map",
-    "453.ef698098.chunk.js.map": "/static/js/453.ef698098.chunk.js.map"
+    "main.css": "/club-website-24/static/css/main.269b3a03.css",
+    "main.js": "/club-website-24/static/js/main.7742e543.js",
+    "static/js/453.ef698098.chunk.js": "/club-website-24/static/js/453.ef698098.chunk.js",
+    "static/media/1-min.jpeg": "/club-website-24/static/media/1-min.372d421a796c1972f572.jpeg",
+    "static/media/2-min.jpeg": "/club-website-24/static/media/2-min.c95aa2420e3d0536b498.jpeg",
+    "static/media/3-min.jpeg": "/club-website-24/static/media/3-min.1151aea115ae78d630af.jpeg",
+    "static/media/ICON.png": "/club-website-24/static/media/ICON.b13e30676b097eec3da1.png",
+    "index.html": "/club-website-24/index.html",
+    "main.269b3a03.css.map": "/club-website-24/static/css/main.269b3a03.css.map",
+    "main.7742e543.js.map": "/club-website-24/static/js/main.7742e543.js.map",
+    "453.ef698098.chunk.js.map": "/club-website-24/static/js/453.ef698098.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.269b3a03.css",
-    "static/js/main.cfa915d8.js"
+    "static/js/main.7742e543.js"
   ]
 }
