@@ -8,18 +8,16 @@ import Projects from './pages/projects';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const basename = '/'; // This will help in local and production environments
-
   return (
     <div className="App">
-      <BrowserRouter basename={basename}>
+      <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Homepage />}/>
+            <Route path="/events" element={<Events />}/>
+            <Route path="/gallery" element={<Gallery />}/>
+            <Route path="/projects" element={<Projects />}/>
+          </Routes>
         <Footer />
       </BrowserRouter>
     </div>
