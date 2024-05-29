@@ -10,7 +10,7 @@ const Header = () => {
           <ul className="flex justify-center space-x-10 ml-32 font-bold text-lg">
             <li>
               <Link
-                href="/"
+                to="/"
                 className="custom-underline"
               >
                 Home
@@ -18,7 +18,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href='/events'
+                to='/events'
                 className="custom-underline"
               >
                 Events
@@ -26,7 +26,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/projects"
+                to="/projects"
                 className="custom-underline"
               >
                 Projects
@@ -34,7 +34,7 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="/gallery"
+                to="/gallery"
                 className="custom-underline"
               >
                 Gallery
