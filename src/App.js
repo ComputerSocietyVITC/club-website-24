@@ -8,7 +8,7 @@ import Projects from './pages/projects';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const basename = process.env.PUBLIC_URL || ''; // This will help in local and production environments
+  const basename = '/'; // This will help in local and production environments
 
   return (
     <div className="App">
