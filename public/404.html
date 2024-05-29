@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=./index.html">
-  </head>
-  <body>
-    <h1>Redirecting...</h1>
-    <script>
-      // Handle the redirect to support client-side routing
-      if (!window.location.pathname.endsWith('/')) {
-        window.location.pathname += '/';
-      }
-      window.location.replace(
-        window.location.origin + window.location.pathname + window.location.search
-      );
-    </script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found</title>
+</head>
+<body>
+  <script>
+    window.location.href = '/'; // Redirect to the root
+  </script>
+</body>
 </html>
