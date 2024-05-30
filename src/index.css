@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbars in WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbars in other browsers (Firefox, Edge) */
+body {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Optional: Ensure overflow behavior is maintained */
+
+
+/* If you need scrollable areas without scrollbars */
+.scrollable-container {
+  overflow: auto; /* or overflow-y: auto; for vertical scrolling */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
 div {
   font-family: 'Montserrat', sans-serif;
 }

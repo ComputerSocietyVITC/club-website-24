@@ -9,16 +9,16 @@ const ParallaxScroll = ({ images, className }) => {
     offset: ["start start", "end start"],
   });
 
-  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const translateFourth = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -400]);
+  const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const translateThird = useTransform(scrollYProgress, [0, 1], [0, -400]);
+  const translateFourth = useTransform(scrollYProgress, [0, 1], [0, 900]);
 
   const third = Math.ceil(images.length / 4);
   const firstPart = images.slice(0, third);
   const secondPart = images.slice(third, 2 * third);
   const thirdPart = images.slice(2 * third, 3*third);
-  const FourthPart = images.slice(3 * third);
+  const FourthPart = images.slice(3 * third, 4*third);
 
   return (
     <div className={cn("h-[100em] items-start overflow-y-auto w-full", className)} ref={gridRef}>

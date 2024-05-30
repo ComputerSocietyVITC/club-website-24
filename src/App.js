@@ -8,6 +8,7 @@ import Projects from './pages/projects';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SplashScreen from './components/ui/splashscreen';
 
+
 function App() {
   return (
   
