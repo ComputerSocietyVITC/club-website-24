@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+div {
+  font-family: 'Montserrat', sans-serif;
+}
 
 .custom-underline {
   position: relative;
