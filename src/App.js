@@ -9,7 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (<BrowserRouter>
-        <Header />
+        <Header type={1} />
+        <Header type={0} />
           <Routes>
             <Route path="/" element={<Homepage />}/>
             <Route path="/events" element={<Events />}/>
