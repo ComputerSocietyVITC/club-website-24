@@ -1,5 +1,6 @@
 import React from 'react'
 import ParallaxScroll from "../components/ui/parallel-scroll";
+import Header from '../components/header';
 
 const images = [
   "https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
@@ -71,12 +72,13 @@ const images = [
   "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80",
 ];
 const Gallery = () => {
-  return (
+  return (<>
+    <Header type={0} />
     <div className='bg-slate-950 p-9 min-h-screen'>
       <h1 className='text-white text-9xl font-bold text-center pb-16'> 
       Gallery</h1>
       <ParallaxScroll images={images} />
-    </div>
+    </div></>
   )
 }
 
