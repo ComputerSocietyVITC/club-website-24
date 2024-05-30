@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../ICON.png'; // Adjust the path to your image
+import { Link } from 'react-router-dom';
 const Header = () => {
   return (
     <header className="bg-slate-950 text-white p-4 shadow-md">
@@ -8,36 +9,36 @@ const Header = () => {
         <nav className="flex-1">
           <ul className="flex justify-center space-x-10 ml-32 font-bold text-lg">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="custom-underline"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='/events'
+              <Link
+                to='/events'
                 className="custom-underline"
               >
                 Events
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/projects"
+              <Link
+                to="/projects"
                 className="custom-underline"
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/gallery"
+              <Link
+                to="/gallery"
                 className="custom-underline"
               >
                 Gallery
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

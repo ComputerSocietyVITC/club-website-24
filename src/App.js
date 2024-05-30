@@ -8,9 +8,7 @@ import Projects from './pages/projects';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
+  return (<BrowserRouter>
         <Header />
           <Routes>
             <Route path="/" element={<Homepage />}/>
@@ -18,9 +16,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />}/>
             <Route path="/projects" element={<Projects />}/>
           </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+        <Footer /></BrowserRouter>
   );
 }
 

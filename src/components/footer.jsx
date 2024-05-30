@@ -35,16 +35,16 @@ const Footer = () => {
                 <div className="w-full md:w-1/4 mb-8 md:mb-0">
                     <h4 className="text-lg font-mono custom-underline-gradient">Social Media</h4>
                     <div className="flex space-x-8 mt-4">
-                        <a href="#" className=" hover:text-blue-500"><FaTwitter size={24} className='icon' /></a>
-                        <a href="#" className=" hover:text-pink-500"><FaInstagram size={24} className='icon'/></a>
-                        <a href="#" className=" hover:text-red-500"><FaYoutube size={24} className='icon'/></a>
-                        <a href="#" className=" hover:text-blue-400"><FaTelegramPlane size={24} className='icon'/></a>
+                        <a href="/temp" className=" hover:text-blue-500"><FaTwitter size={24} className='icon' /></a>
+                        <a href="/temp" className=" hover:text-pink-500"><FaInstagram size={24} className='icon'/></a>
+                        <a href="/temp" className=" hover:text-red-500"><FaYoutube size={24} className='icon'/></a>
+                        <a href="/temp" className=" hover:text-blue-400"><FaTelegramPlane size={24} className='icon'/></a>
                     </div>
                     <div className="flex space-x-8 mt-4">
-                        <a href="#" className=" hover:text-gray-500"><FaGamepad size={24} className='icon' /></a>
-                        <a href="#" className=" hover:text-blue-700"><FaLinkedin size={24} className='icon'/></a>
-                        <a href="#" className=" hover:text-gray-700"><FaGithub size={24} className='icon'/></a>
-                        <a href="#" className=" hover:text-black"><FaMedium size={24} className='icon'/></a>
+                        <a href="/temp" className=" hover:text-gray-500"><FaGamepad size={24} className='icon' /></a>
+                        <a href="/temp" className=" hover:text-blue-700"><FaLinkedin size={24} className='icon'/></a>
+                        <a href="/temp" className=" hover:text-gray-700"><FaGithub size={24} className='icon'/></a>
+                        <a href="/temp" className=" hover:text-black"><FaMedium size={24} className='icon'/></a>
                     </div>
                 </div>
             </div>
