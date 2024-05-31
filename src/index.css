@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbars in WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbars in other browsers (Firefox, Edge) */
+body {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Optional: Ensure overflow behavior is maintained */
+
+
+/* If you need scrollable areas without scrollbars */
+.scrollable-container {
+  overflow: auto; /* or overflow-y: auto; for vertical scrolling */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;    /* Firefox */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
+div {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .custom-underline {
   position: relative;
   text-decoration: none;
@@ -10,22 +39,25 @@
 .custom-underline::after {
   content: "";
   position: absolute;
-  
+  bottom: -2px;
+  left: 0; /* Start position */
+  width: 0; /* Initial width */
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: #10b981;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Transition both width and left position */
 }
 
 .custom-underline:hover::after {
-    left: 20%;
-    bottom: -2px;
-    width: 55%;
-    height: 2px;
-    background-color: #10b981;
-    transition: width 0.3s ease-in-out;
+  width: 100%; /* Expand to 100% */
+  left: 0; /* Start from the left */
 }
+
 .icon {
   fill: black;
   stroke: white;
   stroke-width: 20;
 }
+
 
 /* index.css */
 .custom-underline-gradient {

@@ -1,13 +1,13 @@
 import React from 'react';
 import logo from '../ICON.png'; // Adjust the path to your image
 import { Link } from 'react-router-dom';
-const Header = () => {
+const Header = ({ type }) => {
   return (
-    <header className="bg-slate-950 text-white p-4 shadow-md">
+    <header className={`w-full bg-gradient-to-b from-black to-slate-950 text-white p-4 shadow-md ${type ? "fixed top-0 left-0 z-50" : ""}`}>
       <div className="container mx-auto flex justify-between items-center">
-        <img src={logo} alt="IEEE Logo" className="h-8 w-8" /> {/* Logo aligned to the left */}
+        <img src={logo} alt="IEEE Logo" className="absolute h-12 w-12" />
         <nav className="flex-1">
-          <ul className="flex justify-center space-x-10 ml-32 font-bold text-lg">
+          <ul className="flex justify-center space-x-20 my-2 font-normal text-lg">
             <li>
               <Link
                 to="/"
@@ -42,10 +42,6 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className="flex space-x-4">
-          <div className="w-24 h-8 bg-gray-200 rounded-md"></div>
-          <div className="w-24 h-8 bg-green-400 rounded-md"></div>
-        </div>
       </div>
     </header>
   );

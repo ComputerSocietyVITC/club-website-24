@@ -1,10 +1,11 @@
 import React from 'react'
+import Header from '../components/header'
 
 const Projects = () => {
   return (
-    <div className='bg-slate-950 p-9'>
-      <h1 className='text-white text-9xl font-bold text-center pb-16'> <span className='text-emerald-500 font-extrabold'>&lt;/</span>Projects<span className='text-emerald-500 font-extrabold'>&gt;</span></h1>
-    </div>
+    <>
+    <Header type={0} />
+    <div>Projects</div></>
   )
 }
 
