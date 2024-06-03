@@ -1,11 +1,12 @@
 import React from 'react'
 import Header from '../components/header'
+import './events.css'
 
 const events = () => {
 return (
     <>
     <Header type={0} />
-    <div className='bg-slate-950 p-9'>
+    <div className='bg-slate-950 p-9 root'>
         <h1 className='text-white text-9xl font-bold text-center pb-16'> <span className='text-emerald-500 font-extrabold'>&lt;/</span>Events<span className='text-emerald-500 font-extrabold'>&gt;</span></h1>
         <div className='flex flex-col  items-center group w-full h-full gap-y-[230px] mb-32'>
             <div className='relative h-[400px]'>
