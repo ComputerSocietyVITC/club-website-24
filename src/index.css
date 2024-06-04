@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* Hide scrollbars in WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   display: none;
@@ -74,4 +75,7 @@ div {
   position: absolute;
   bottom: -2px; /* Adjust the distance from the text */
   left: 0;
+}
+.link-activee {
+  color: white;
 }

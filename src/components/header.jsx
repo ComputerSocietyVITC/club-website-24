@@ -1,44 +1,71 @@
 import React from 'react';
 import logo from '../ICON.png'; // Adjust the path to your image
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 const Header = ({ type }) => {
   return (
     <header className={`w-full bg-gradient-to-b from-black to-slate-950 text-white p-4 shadow-md ${type ? "fixed top-0 left-0 z-50" : ""}`}>
-      <div className="container mx-auto flex justify-between items-center">
-        <img src={logo} alt="IEEE Logo" className="absolute h-12 w-12" />
+      <div className="px-10 py-4 px-7 flex justify-between items-center relative">
+        <img src={logo} alt="IEEE Logo" className=" absolute h-12 w-12" />
         <nav className="flex-1">
-          <ul className="flex justify-center space-x-20 my-2 font-normal text-lg">
+          <ul className="flex justify-end space-x-16 text-slate-500 my-2 font-bold font-montserrat text-xl ">
             <li>
-              <Link
+              <NavLink
                 to="/"
-                className="custom-underline"
+                className="custom-underline hover:text-white  "
+                activeClassName="link-activee"
+
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to='/events'
-                className="custom-underline"
+                className="custom-underline hover:text-white "
+                activeClassName="link-activee"
+
+              >
+                Team
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/events'
+                className="custom-underline hover:text-white"
+                activeClassName="link-activee"
+
               >
                 Events
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/projects"
-                className="custom-underline"
+                className="custom-underline hover:text-white "
+                activeClassName="link-activee"
+
               >
                 Projects
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink exact
                 to="/gallery"
-                className="custom-underline"
+                className="custom-underline hover:text-white"
+                activeClassName="link-activee"
               >
                 Gallery
-              </Link>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/gallery"
+                className="custom-underline hover:text-white"
+                activeClassName="link-activee"
+
+              >
+                Blogs
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -48,3 +75,4 @@ const Header = ({ type }) => {
 };
 
 export default Header;
+
