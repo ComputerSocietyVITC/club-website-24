@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -15,20 +15,35 @@ import { useNavigate } from "react-router-dom";
 const Events = () => {
     const navigate = useNavigate();
 
+    const [slides, setSlides] = useState([
+        { src: image1, eventName: 'Event 1' },
+        { src: image1, eventName: 'Event 2' },
+        { src: image1, eventName: 'Event 3' },
+        { src: image1, eventName: 'Event 4' },
+        { src: image1, eventName: 'Event 5' },
+    ]);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [currentEvent, setCurrentEvent] = useState(slides[0].eventName);
+
     const handleNavigateToGallery = () => {
         navigate('/gallery');
+    };
+
+    const handleSlideChange = (swiper) => {
+        setActiveIndex(swiper.activeIndex);
+        setCurrentEvent(slides[swiper.activeIndex].eventName);
     };
 
     return (
         <>
             <Header type={0} />
             <div className="min-h-screen bg-slate-950 events-container">
-                <div className="text-white text-9xl font-bold text-center pb-16">EVENT TITLE</div>
+                <div className="text-white text-9xl font-bold text-center pb-16">{currentEvent}</div>
                 <Swiper
                     effect={"coverflow"}
-                    grabCursor={false}
+                    grabCursor={true}
                     centeredSlides={true}
-                    loop={true}
+                    loop={false}
                     slidesPerView={3}
                     coverflowEffect={
                         {
@@ -42,22 +57,13 @@ const Events = () => {
                     pagination={{el: '.swiper-pagination', clickable: true}}
                     modules={[EffectCoverflow, Pagination]}
                     className="swiper-container"
+                    onSlideChange={handleSlideChange}
                 >
-                    <SwiperSlide>
-                        <img src={image1} alt={"image"}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={image1} alt={"image"}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={image1} alt={"image"}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={image1} alt={"image"}/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={image1} alt={"image"}/>
-                    </SwiperSlide>
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <img src={slide.src} alt={"image"} />
+                        </SwiperSlide>
+                    ))}
                     <div className="slider-controler">
                         <div className="swiper-pagination"></div>
                     </div>
@@ -66,7 +72,7 @@ const Events = () => {
                     className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'
                     onClick={handleNavigateToGallery}
                 >
-`                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery ></span>
+`                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery &gt;</span>
 `                </button>
             </div>
         </>
