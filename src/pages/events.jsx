@@ -10,8 +10,15 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import Header from "../components/header";
 
 import image1 from '../data/images/12.jpg';
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+    const navigate = useNavigate();
+
+    const handleNavigateToGallery = () => {
+        navigate('/gallery');
+    };
+
     return (
         <>
             <Header type={0} />
@@ -56,9 +63,11 @@ const Events = () => {
                     </div>
                 </Swiper>
                 <button
-                    className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'>
-                    <p className='text-teal-500 text-montserrat font-light text-lg'>View Gallery ></p>
-                </button>
+                    className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'
+                    onClick={handleNavigateToGallery}
+                >
+`                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery ></span>
+`                </button>
             </div>
         </>
     )
