@@ -1,5 +1,7 @@
 import React from "react";
 import ImageAccordian from '../components/Accordian/imageAccordian'
+import Footer from "../components/footer";
+
 
 const Homepage = () => {
     return (
@@ -30,6 +32,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };
