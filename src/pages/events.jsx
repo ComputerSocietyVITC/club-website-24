@@ -10,7 +10,6 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import Header from "../components/header";
 
 import image1 from '../data/images/12.jpg';
-import Footer from "../components/footer";
 
 const Events = () => {
     return (
@@ -52,12 +51,12 @@ const Events = () => {
                     <SwiperSlide>
                         <img src={image1} alt={"image"}/>
                     </SwiperSlide>
+                    <div className="slider-controler">
+                        <div className="swiper-pagination"></div>
+                    </div>
                 </Swiper>
-                <div className="slider-controler">
-                    <div className="swiper-pagination"></div>
-                </div>
                 <button
-                    className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end mt-8'>
+                    className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'>
                     <p className='text-teal-500 text-montserrat font-light text-lg'>View Gallery ></p>
                 </button>
             </div>

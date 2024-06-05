@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './components/header';
-import Footer from './components/footer';
 import Homepage from './pages/homepage';
 import Events from './pages/events';
 import Gallery from './pages/gallery';
@@ -25,7 +24,6 @@ function App() {
           <Route path="/projects" element={<Projects />}/>
           <Route path="/blogs" element={<Blogs />}/>
       </Routes>
-      <Footer />
   </BrowserRouter>
   );
 }

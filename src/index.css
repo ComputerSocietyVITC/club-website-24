@@ -83,7 +83,7 @@ div {
 
 .events-container {
   max-width: 124rem;
-  padding: 4rem 1rem;
+  padding: 4rem 0;
   margin: 0 auto;
 }
 
@@ -104,11 +104,6 @@ div {
   height: 36rem;
   border-radius: 1rem;
   object-fit: cover;
-}
-
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  display: none;
 }
 
 .slider-controler {
