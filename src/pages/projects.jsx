@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <>
     <Header type={0} />
-    <div>Projects</div></>
+    <div className={"min-h-screen bg-slate-950"}>Projects</div></>
   )
 }
 

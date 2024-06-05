@@ -20,7 +20,7 @@ const Header = ({ type }) => {
             </li>
             <li>
               <NavLink
-                to='/events'
+                to='/team'
                 className="custom-underline hover:text-white "
                 activeClassName="link-activee"
 
@@ -59,7 +59,7 @@ const Header = ({ type }) => {
             </li>
             <li>
               <NavLink
-                to="/gallery"
+                to="/blogs"
                 className="custom-underline hover:text-white"
                 activeClassName="link-activee"
 
