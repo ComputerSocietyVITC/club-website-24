@@ -6,7 +6,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import Header from "../components/header";
 
 import image1 from '../data/images/12.jpg';
@@ -55,9 +55,15 @@ const Events = () => {
                         }
                     }
                     pagination={{el: '.swiper-pagination', clickable: true}}
-                    modules={[EffectCoverflow, Pagination]}
+                    modules={[Autoplay, EffectCoverflow, Pagination]}
                     className="swiper-container"
                     onSlideChange={handleSlideChange}
+                    autoplay={{
+                        delay: 2000,
+                        stopOnLastSlide: false,
+                        disableOnInteraction: false,
+                        speed: 500
+                    }}
                 >
                     {slides.map((slide, index) => (
                         <SwiperSlide key={index}>
