@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/footer";
 
 
 const Homepage = () => {
@@ -19,6 +20,7 @@ const Homepage = () => {
                     <button className='border border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1  to-b_col2 ' ><p className='text-teal-500 text-montserrat font-light text-lg'>Gateway to Tech &#x25BC;</p></button>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

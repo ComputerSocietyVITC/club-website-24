@@ -1,42 +1,76 @@
 import React from 'react'
-import Header from '../components/header'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const events = () => {
-return (
-    <>
-    <Header type={0} />
-    <div className='bg-slate-950 p-9'>
-        <h1 className='text-white text-9xl font-bold text-center pb-16'> <span className='text-emerald-500 font-extrabold'>&lt;/</span>Events<span className='text-emerald-500 font-extrabold'>&gt;</span></h1>
-        <div className='flex flex-col  items-center group w-full h-full gap-y-[230px] mb-32'>
-            <div className='relative h-[400px]'>
-                <div className='w-[1100px] h-[400px] border-white border-4 p-16 rounded-2xl z-10'><h1 className='text-white text-center text-3xl font-bold align-center'>Insert Photo</h1></div>
-                <div className=' absolute bottom-[-30%] w-[1100px] h-[135px] border-emerald-500 border-4 border-t-0 border-dashed rounded-b-2xl z-0 px-[5%]'>
-                    <div className='absolute bottom-[15%] w-[80%] text-white flex flex-col gap-y-3'>
-                        <h2 className='text-4xl font-semibold text-emerald-500'>Event name</h2>
-                        <div className='flex justify-between'>
-                            <h3 className='text-2xl font-mono'>Date:XX/XX/XXXX</h3>
-                            <h3 className='text-2xl font-mono'>Venue:</h3>
-                            <h3 className='text-2xl font-mono'>Prize Pool:XXXX/-</h3>
-                        </div>
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import Header from "../components/header";
+
+import image1 from '../data/images/12.jpg';
+import { useNavigate } from "react-router-dom";
+
+const Events = () => {
+    const navigate = useNavigate();
+
+    const handleNavigateToGallery = () => {
+        navigate('/gallery');
+    };
+
+    return (
+        <>
+            <Header type={0} />
+            <div className="min-h-screen bg-slate-950 events-container">
+                <div className="text-white text-9xl font-bold text-center pb-16">EVENT TITLE</div>
+                <Swiper
+                    effect={"coverflow"}
+                    grabCursor={false}
+                    centeredSlides={true}
+                    loop={true}
+                    slidesPerView={3}
+                    coverflowEffect={
+                        {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+
+                        }
+                    }
+                    pagination={{el: '.swiper-pagination', clickable: true}}
+                    modules={[EffectCoverflow, Pagination]}
+                    className="swiper-container"
+                >
+                    <SwiperSlide>
+                        <img src={image1} alt={"image"}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={image1} alt={"image"}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={image1} alt={"image"}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={image1} alt={"image"}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={image1} alt={"image"}/>
+                    </SwiperSlide>
+                    <div className="slider-controler">
+                        <div className="swiper-pagination"></div>
                     </div>
-                </div>
+                </Swiper>
+                <button
+                    className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'
+                    onClick={handleNavigateToGallery}
+                >
+`                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery ></span>
+`                </button>
             </div>
-            <div className='relative h-[400px]'>
-                <div className='w-[1100px] h-[400px] border-white border-4 p-16 rounded-2xl z-10'><h1 className='text-white text-center text-3xl font-bold align-center'>Insert Photo</h1></div>
-                <div className=' absolute bottom-[-30%] w-[1100px] h-[135px] border-emerald-500 border-4 border-t-0 border-dashed rounded-b-2xl z-0 px-[5%]'>
-                    <div className='absolute bottom-[15%] w-[80%] text-white flex flex-col gap-y-3'>
-                        <h2 className='text-4xl font-semibold text-emerald-500'>Event name</h2>
-                        <div className='flex justify-between'>
-                            <h3 className='text-2xl font-mono'>Date:XX/XX/XXXX</h3>
-                            <h3 className='text-2xl font-mono'>Venue:</h3>
-                            <h3 className='text-2xl font-mono'>Prize Pool:XXXX/-</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div></>
-)
+        </>
+    )
 }
 
-export default events
+export default Events
