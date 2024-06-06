@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
-		<div className="bg-slate-950 relative z-0 p-12">
+		<div className="bg-slate-950 relative z-0 p-12 border-t-2">
 			<footer className="font-montserrat">
-				<div className="text-gray-800 flex flex-wrap lg:flex-nowrap items-center">
+				<div className="text-gray-800 flex flex-wrap lg:flex-nowrap items-stretch">
 					
 						<a href="https://ieeecsvitc.com" className="md:self-center flex items-center justify-center order-4 lg:order-1 md:flex-col md:flex sm:flex sm:flex-col mx-12">
 							<img src={comsocLogowhite} alt="IEEE CS VITC Logo" height={500} width={500}/>
@@ -29,6 +29,12 @@ const Footer = () => {
 							className="my-3 block text-white hover:text-gray-200 text-sm "
 						>
 							Home
+						</Link>
+						<Link
+							to="/team"
+							className="my-3 block text-white hover:text-gray-200 text-sm"
+						>
+							Team
 						</Link>
 						<Link
 							to="/events"
@@ -47,6 +53,12 @@ const Footer = () => {
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
 							Gallery
+						</Link>
+						<Link
+							to="/blogs"
+							className="my-3 block text-white hover:text-gray-200 text-sm"
+						>
+							Blogs
 						</Link>
 					</div>
 					<div className="mt-3 sm:w-screen md:flex-col md:w-screen md:flex sm:flex sm:flex-col w-full lg:w-3/12 order-2 lg:order-3 ">
