@@ -12,6 +12,8 @@ module.exports = {
       colors: {
         b_col1: '#123838',
         b_col2: '#0C2B38',
+        b_col3: '#6CEDFF',
+        b_col4: '#055A98',
 
       },
     },
