@@ -7,7 +7,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
-import Header from "../components/header";
 
 import image1 from '../data/images/12.jpg';
 import { useNavigate } from "react-router-dom";
@@ -36,7 +35,6 @@ const Events = () => {
 
     return (
         <>
-            <Header type={0} />
             <div className="min-h-screen bg-slate-950 events-container">
                 <div className="text-white text-9xl font-bold text-center pb-16">{currentEvent}</div>
                 <Swiper
