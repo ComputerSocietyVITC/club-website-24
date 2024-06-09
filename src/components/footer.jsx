@@ -85,7 +85,7 @@ const Footer = () => {
 							Social Media
 						</div>
 						<div>
-						<div className="grid grid-cols-4 place-items-center">
+						<div className="grid grid-cols-4 plac e-items-center">
 							<div>
 								<a
 									href="https://www.instagram.com/compsoc.vitcc/"
