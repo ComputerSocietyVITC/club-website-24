@@ -1,27 +1,23 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
-
 import image1 from '../data/images/12.jpg';
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Events = () => {
     const navigate = useNavigate();
 
-    const [slides, setSlides] = useState([
+    const [slides] = useState([
         { src: image1, eventName: 'Event 1' },
         { src: image1, eventName: 'Event 2' },
         { src: image1, eventName: 'Event 3' },
         { src: image1, eventName: 'Event 4' },
         { src: image1, eventName: 'Event 5' },
     ]);
-    const [activeIndex, setActiveIndex] = useState(0);
     const [currentEvent, setCurrentEvent] = useState(slides[0].eventName);
 
     const handleNavigateToGallery = () => {
@@ -29,7 +25,6 @@ const Events = () => {
     };
 
     const handleSlideChange = (swiper) => {
-        setActiveIndex(swiper.activeIndex);
         setCurrentEvent(slides[swiper.activeIndex].eventName);
     };
 
@@ -43,16 +38,13 @@ const Events = () => {
                     centeredSlides={true}
                     loop={false}
                     slidesPerView={3}
-                    coverflowEffect={
-                        {
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 100,
-                            modifier: 1,
-
-                        }
-                    }
-                    pagination={{el: '.swiper-pagination', clickable: true}}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                    }}
+                    pagination={{ el: '.swiper-pagination', clickable: true }}
                     modules={[Autoplay, EffectCoverflow, Pagination]}
                     className="swiper-container"
                     onSlideChange={handleSlideChange}
@@ -65,7 +57,7 @@ const Events = () => {
                 >
                     {slides.map((slide, index) => (
                         <SwiperSlide key={index}>
-                            <img src={slide.src} alt={"image"} />
+                            <img src={slide.src} alt={slide.eventName} />
                         </SwiperSlide>
                     ))}
                     <div className="slider-controler">
@@ -76,11 +68,11 @@ const Events = () => {
                     className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'
                     onClick={handleNavigateToGallery}
                 >
-`                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery &gt;</span>
-`                </button>
+                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery &gt;</span>
+                </button>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Events
+export default Events;
