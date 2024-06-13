@@ -5,7 +5,7 @@ const images = importAll(require.context('../data/images', false, /\.(png|jpe?g|
 
 const Gallery = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex justify-center items-center">
+    <div className="min-h-screen gradient text-white flex justify-center items-center">
       <div className="w-full max-w-6xl p-4">
         <div className="grid grid-cols-4 gap-4">
           {/* Main Image */}

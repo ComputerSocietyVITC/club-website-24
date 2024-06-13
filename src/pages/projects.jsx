@@ -3,7 +3,7 @@ import React from 'react'
 const Projects = () => {
   return (
     <>
-        <div className={"min-h-screen bg-slate-950"}>Projects</div>
+        <div className={"min-h-screen gradient"}>Projects</div>
     </>
   )
 }

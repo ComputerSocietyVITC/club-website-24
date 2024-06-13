@@ -7,7 +7,7 @@ const Blogs = () => {
 
     return (
         <>
-            <div className={"min-h-screen bg-slate-950 flex flex-col items-center"}>
+            <div className={"min-h-screen gradient flex flex-col items-center"}>
                 <div className="text-white text-9xl font-bold text-center pb-16">Blogs</div>
 
                 <div className="w-full max-w-6xl mb-16">

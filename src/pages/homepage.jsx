@@ -7,7 +7,7 @@ const Homepage = () => {
     const [activeItem, setActiveItem] = useState(items[0]);
     return (
         <>
-            <div className="min-h-screen bg-slate-950 ">
+            <div className="min-h-screen gradient">
                 <div className="container mx-auto grid grid-cols-1 items-center justify-center min-h-screen ">
                     
                         <h1 className="text-7xl font-bold leading-tight text-center text-emerald-400">
