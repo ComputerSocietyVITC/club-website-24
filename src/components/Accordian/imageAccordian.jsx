@@ -1,32 +1,12 @@
 import React from 'react'
 import { useState } from "react";
 import "./style.css";
+import items from '../../pages/homedata'
 
-const items = [
-    {
-        header: "ABOUT US",
-        header2: "ABOUT US",
-    },
-
-    {
-        header: "OUR VISION",
-        header2: "OUR VISION",
-    },
-
-    {
-        header: "NEWSLETTER",
-        header2: "NEWSLETTER",
-    },
-    {
-        header: "CONTACT",
-        header2: "CONTACT",
-    },
-]; 
-
-const ImageAccordian = () => {
+const ImageAccordian = ({ itemms, setActiveItem }) => {
     const [active, setActive] = useState(0);
 
-    const handleToggle = (index) => setActive(index);
+    const handleToggle = (index) =>{setActive(index); setActiveItem(itemms[index]);}
     return (
     <>
         <div className="image-accordion">
@@ -39,8 +19,9 @@ const ImageAccordian = () => {
                 className={`image-accordion-item ${isActive}`}
                 onClick={() => handleToggle(index)}
                 >
-                
+                <h2 className='out_content -rotate-90'>{item.header}</h2>
                 <div className="content">
+                    
                     <h2>{item.header2}</h2>
                 </div>
                 </div>
@@ -48,6 +29,7 @@ const ImageAccordian = () => {
             );
             })}
         </div>
+
     </>
     );
 }
