@@ -135,5 +135,28 @@ div {
   background: white;
 }
 
+.blog-card {
+  max-width: 300px;
+}
 
+.blog-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
 
+.blog-date {
+  color: rgb(209 213 219);
+  margin-bottom: 1rem;
+}
+
+.blog-image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.gradient {
+    background: linear-gradient(to bottom, #0E1C31, #040414);
+}

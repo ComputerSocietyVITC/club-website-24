@@ -35,7 +35,7 @@ const Events = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-slate-950 events-container">
+            <div className="min-h-screen gradient events-container">
                 <div className="text-white text-9xl font-bold text-center pb-16">{currentEvent}</div>
                 <Swiper
                     effect={"coverflow"}
