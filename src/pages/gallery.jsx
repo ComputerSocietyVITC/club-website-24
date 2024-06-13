@@ -1,36 +1,97 @@
-import React from 'react';
+import React, {useState} from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const importAll = (r) => r.keys().map(r);
-const images = importAll(require.context('../data/images', false, /\.(png|jpe?g|svg)$/));
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
+
+import image1 from '../data/images/12.jpg';
+import image2 from '../data/images/11.jpg';
+
+
+import { useNavigate } from "react-router-dom";
 
 const Gallery = () => {
-  return (
-    <div className="min-h-screen gradient text-white flex justify-center items-center">
-      <div className="w-full max-w-6xl p-4">
-        <div className="grid grid-cols-4 gap-4">
-          {/* Main Image */}
-          <div className="col-span-1 flex justify-center items-center">
-            <img
-              src={images[0]}
-              alt="Main"
-              className="w-11/12 h-auto rounded-lg object-cover"
-            />
-          </div>
-          {/* Grid of Images */}
-          <div className="col-span-3 ml-10 grid grid-cols-4 gap-1">
-            {images.slice(1, 9).map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                alt={`Gallery ${index}`}
-                className="w-full h-auto rounded-lg object-cover"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+    const navigate = useNavigate();
+
+    const [slides, setSlides] = useState([
+        { src: image1, eventName: 'This so and so happened in this event, you could literally see it with your own eyes.' },
+        { src: image2, eventName: 'Event 2' },
+        { src: image1, eventName: 'Event 3' },
+        { src: image1, eventName: 'Event 4' },
+        { src: image1, eventName: 'Event 5' },
+    ]);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [currentEvent, setCurrentEvent] = useState(slides[0].eventName);
+
+    const handleNavigateToGallery = () => {
+        navigate('/gallery');
+    };
+
+    const handleSlideChange = (swiper) => {
+        setActiveIndex(swiper.activeIndex);
+        setCurrentEvent(slides[swiper.activeIndex].eventName);
+    };
+
+    return (
+        <>
+            <div className="min-h-screen bg-slate-950 events-container">
+                <div className="text-white text-9xl font-bold text-center pb-16">{currentEvent}</div>
+          <Swiper
+                    effect={"coverflow"}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    loop={true}
+                    slidesPerView={5}
+                    coverflowEffect={
+                        {
+                            rotate: -10,
+                            stretch: 20,
+                            depth: 350,
+                            modifier: 1,
+
+                        }
+                    }
+                    pagination={{el: '.swiper-pagination', clickable: true}}
+                    modules={[Autoplay, EffectCoverflow, Pagination]}
+                    onSlideChange={handleSlideChange}
+                    autoplay={{
+                        delay: 5000,
+                        stopOnLastSlide: true,
+                        disableOnInteraction: true, 
+                        speed: 200
+                    }}
+                >
+                    {slides.map((slide, index) => (
+                     <SwiperSlide key={index}>
+                     <section className='bg-[#f4f3e9] px-4 pt-4 flex flex-col items-center justify-center'>
+                       <img
+                         src={slide.src}
+                         alt={"image"}
+                         style={{ maxHeight: '500px', maxWidth: '100%' }}
+                       />
+                       <section className='text-center py-12'>{slide.eventName}</section>
+                     </section>
+                   </SwiperSlide>
+                   
+                    ))}
+                    <div className="slider-controler">
+                        <div className="swiper-pagination"></div>
+                    </div>
+                </Swiper>
+                <button
+                    className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'
+                    onClick={handleNavigateToGallery}
+                >
+`                    <span className='text-teal-500 text-montserrat font-light text-lg'>View Gallery &gt;</span>
+`                </button>
+            </div>
+        </>
+    )
+}
 
 export default Gallery;
+
