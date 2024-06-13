@@ -5,7 +5,11 @@
   "homepage": "https://beta.ieeecsvitc.com",
   "dependencies": {
     "@fontsource/raleway": "^5.0.19",
+<<<<<<< HEAD
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+=======
     "@heroicons/react": "^2.1.3",
+>>>>>>> c638d141f8f1e030aa5d5e2b7e19794555c86ae1
     "@tailwindcss/line-clamp": "^0.4.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -17,6 +21,7 @@
     "react-icons": "^5.2.1",
     "react-id-swiper": "^4.0.0",
     "react-photo-album": "^2.4.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.11",
     "swiper": "^11.1.4",
