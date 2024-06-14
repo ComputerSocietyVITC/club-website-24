@@ -160,3 +160,14 @@ div {
 .gradient {
     background: linear-gradient(to bottom, #0E1C31, #040414);
 }
+
+.img-hover:hover .img1 {
+  transform: rotate(0deg);
+  width:200px;
+  height:200px;
+  border-radius:45%;
+  transition:0.5s;
+}
+
+
+
