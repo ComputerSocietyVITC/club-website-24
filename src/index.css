@@ -87,10 +87,6 @@ div {
   margin: 0 auto;
 }
 
-
-
-
-
 .swiper-slide img {
   max-width: 600px;
   max-height: 500px;
@@ -158,5 +154,6 @@ div {
   transition:0.5s;
 }
 
-
-
+header {
+  background: #0E1C31;
+}
