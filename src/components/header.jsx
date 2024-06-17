@@ -15,8 +15,8 @@ const Header = () => {
   useClickAway(ref, () => setIsOpen(false));
 
   return (
-    <header className="w-full text-white fixed z-10">
-      <div className="px-6 py-4 xl:px-8 xl:py-6 flex justify-between items-center relative ">
+    <header className={`w-full text-white fixed z-10 ${!isOpen ? "border-b-2 border-b-slate-600" : ""}`}>
+      <div className="px-6 py-4 xl:px-8 xl:py-6 flex justify-between items-center relative">
         <img src={logo} alt="IEEE Logo" className="h-12 w-12" />
         <nav className="flex-1 flex justify-end xl:hidden">
           <button onClick={handleClick} className="flex flex-col justify-center items-center">
@@ -37,12 +37,13 @@ const Header = () => {
             </span>
           </button>
           {isOpen && (
-            <div className="absolute left-0 right-0 top-[3.5rem] p-5 pt-0 bg-neutral-950 border-b border-b-white/20">
-          <ul className="grid gap-2">
+            <div className="absolute left-0 right-0 top-[3.5rem] p-5 mt-2 bg-gradient-to-t from-[#040414] to-[#0E1C31] border-b-2 border-b-slate-600">
+          <ul className="grid gap-3">
             {routes.map((route) => {
               return (
                 <li key={route.title}>
                   <NavLink
+                    className="p-2"
                     to={route.href}
                     onClick={handleClick}
                   >
