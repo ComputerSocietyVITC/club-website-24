@@ -20,6 +20,7 @@
     "react-photo-album": "^2.4.0",
     "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
+    "react-use": "^17.5.0",
     "styled-components": "^6.1.11",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
