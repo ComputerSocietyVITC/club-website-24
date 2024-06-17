@@ -15,7 +15,7 @@ function App() {
   
   <BrowserRouter>
       <SplashScreen/>
-      <Header type={1} />
+      <Header />
       <Routes>
           <Route path="/" element={<Homepage />}/>
           <Route path="/team" element={<Team />}/>

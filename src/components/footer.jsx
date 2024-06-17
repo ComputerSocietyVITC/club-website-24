@@ -21,7 +21,7 @@ const Footer = () => {
 						</a>
 					<div className="mt-3 w-full lg:w-2/12 py-6 lg:py-0 hidden lg:block order-1 lg:order-2">
 						<div className="text-lg lg:text-base text-white inline-block mb-3 custom-underline-gradient">
-							Menu
+							Quick Links
 						</div>
 						<Link
 							to="/"
@@ -212,7 +212,7 @@ const Footer = () => {
 					<div className="flex w-full justify-around flex-wrap mt-3 order-2">
 						<div className="py-6 hidden lg:block">
 							<div className="text-lg lg:text-base text-white mb-3 custom-underline-gradient">
-								Menu
+								Quick Links
 							</div>
 							<Link to="/" className="my-3 block text-white hover:text-gray-200 text-sm">Home</Link>
 							<Link to="/team" className="my-3 block text-white hover:text-gray-200 text-sm">Team</Link>
