@@ -1,14 +1,8 @@
 import React from "react";
 import comsocLogowhite from "../assets/comsocLogowhite.svg";
-import instagram from "../assets/socialmedia/instagram.png";
-import github from "../assets/socialmedia/github.png";
-import linkedin from "../assets/socialmedia/linkedin.png";
-import discord from "../assets/socialmedia/discord.png";
-import youtube from "../assets/socialmedia/youtube.png";
-import twitter from "../assets/socialmedia/twitter.png";
-import telegram from "../assets/socialmedia/telegram.png";
-import devto from "../assets/socialmedia/devto.png";
 import { Link } from "react-router-dom";
+import { routes } from "../data/routes";
+import socialMediaLinks from "../data/socialMediaLinks";
 
 const Footer = () => {
 	return (<>
@@ -23,42 +17,15 @@ const Footer = () => {
 						<div className="text-lg lg:text-base text-white inline-block mb-3 custom-underline-gradient">
 							Quick Links
 						</div>
-						<Link
-							to="/"
-							className="my-3 block text-white hover:text-gray-200 text-sm "
-						>
-							Home
-						</Link>
-						<Link
-							to="/team"
-							className="my-3 block text-white hover:text-gray-200 text-sm"
-						>
-							Team
-						</Link>
-						<Link
-							to="/events"
-							className="my-3 block text-white hover:text-gray-200 text-sm"
-						>
-							Events
-						</Link>
-						<Link
-							to="/projects"
-							className="my-3 block text-white hover:text-gray-200 text-sm"
-						>
-							Projects
-						</Link>
-						<Link
-							to="/gallery"
-							className="my-3 block text-white hover:text-gray-200 text-sm"
-						>
-							Gallery
-						</Link>
-						<Link
-							to="/blogs"
-							className="my-3 block text-white hover:text-gray-200 text-sm"
-						>
-							Blogs
-						</Link>
+						{routes.map((route, index) => (
+							<Link
+								key={index}
+								to={route.href}
+								className="my-3 block text-white hover:text-gray-200 text-sm"
+							>
+								{route.title}
+							</Link>
+						))}
 					</div>
 					<div className="mt-3 sm:w-screen md:flex-col md:w-screen md:flex sm:flex sm:flex-col w-full lg:w-3/12 order-2 lg:order-3 ">
 						<div>
@@ -95,114 +62,23 @@ const Footer = () => {
 						<div className="text-lg lg:text-base lg:text-center text-white inline-block mb-3 md:self-center sm:self-center custom-underline-gradient">
 							Social Media
 						</div>
-						<div>
 						<div className="grid grid-cols-4 place-items-center">
-							<div>
-								<a
-									href="https://www.instagram.com/compsoc.vitcc/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={instagram}
-										alt="Instagram"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://discord.gg/6vkY3kcZnE"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={discord}
-										alt="Discord"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://github.com/ComputerSocietyVITC"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={github}
-										alt="Github"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={linkedin}
-										alt="LinkedIn"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://www.youtube.com/channel/UCOgwDinZGau4rwv3swAe-nQ"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={youtube}
-										alt="youtube"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://t.me/IEEE_CS_VIT_Chennai"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={telegram}
-										alt="telegram"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://twitter.com/ieeecsvitc"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={twitter}
-										alt="twitter"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-							<div>
-								<a
-									href="https://dev.to/ieeecsvitc"
-									target="_blank"
-									rel="noreferrer"
-								>
-									<img
-										src={devto}
-										alt="devto"
-										className="h-7 my-5 mx-auto lg:mx-0"
-									></img>
-								</a>
-							</div>
-						</div>
-						</div>
+                                {socialMediaLinks.map((link, index) => (
+                                    <div key={index}>
+                                        <a
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <img
+                                                src={link.icon}
+                                                alt={link.platform}
+                                                className="h-7 my-5 mx-auto lg:mx-0"
+                                            ></img>
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
 					</div>
 				</div>
 				<div className="text-gray-800 hidden lg:flex lg:flex-col items-center xl:hidden">
@@ -214,12 +90,15 @@ const Footer = () => {
 							<div className="text-lg lg:text-base text-white mb-3 custom-underline-gradient">
 								Quick Links
 							</div>
-							<Link to="/" className="my-3 block text-white hover:text-gray-200 text-sm">Home</Link>
-							<Link to="/team" className="my-3 block text-white hover:text-gray-200 text-sm">Team</Link>
-							<Link to="/events" className="my-3 block text-white hover:text-gray-200 text-sm">Events</Link>
-							<Link to="/projects" className="my-3 block text-white hover:text-gray-200 text-sm">Projects</Link>
-							<Link to="/gallery" className="my-3 block text-white hover:text-gray-200 text-sm">Gallery</Link>
-							<Link to="/blogs" className="my-3 block text-white hover:text-gray-200 text-sm">Blogs</Link>
+							{routes.map((route, index) => (
+								<Link
+									key={index}
+									to={route.href}
+									className="my-3 block text-white hover:text-gray-200 text-sm"
+								>
+									{route.title}
+								</Link>
+							))}
 						</div>
 						<div className="mt-3 sm:w-screen md:w-screen w-full lg:w-3/12">
 							<div>
@@ -247,14 +126,21 @@ const Footer = () => {
 								Social Media
 							</div>
 							<div className="grid grid-cols-4 place-items-center">
-								<div><a href="https://www.instagram.com/compsoc.vitcc/" target="_blank" rel="noreferrer"><img src={instagram} alt="Instagram" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://discord.gg/6vkY3kcZnE" target="_blank" rel="noreferrer"><img src={discord} alt="Discord" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://github.com/ComputerSocietyVITC" target="_blank" rel="noreferrer"><img src={github} alt="Github" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/" target="_blank" rel="noreferrer"><img src={linkedin} alt="LinkedIn" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://www.youtube.com/channel/UCOgwDinZGau4rwv3swAe-nQ" target="_blank" rel="noreferrer"><img src={youtube} alt="youtube" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://t.me/IEEE_CS_VIT_Chennai" target="_blank" rel="noreferrer"><img src={telegram} alt="telegram" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://twitter.com/ieeecsvitc" target="_blank" rel="noreferrer"><img src={twitter} alt="twitter" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
-								<div><a href="https://dev.to/ieeecsvitc" target="_blank" rel="noreferrer"><img src={devto} alt="devto" className="h-7 my-5 mx-auto lg:mx-0" /></a></div>
+								{socialMediaLinks.map((link, index) => (
+										<div key={index}>
+											<a
+												href={link.url}
+												target="_blank"
+												rel="noreferrer"
+											>
+												<img
+													src={link.icon}
+													alt={link.platform}
+													className="h-7 my-5 mx-auto lg:mx-0"
+												></img>
+											</a>
+										</div>
+									))}
 							</div>
 						</div>
 					</div>
@@ -290,46 +176,21 @@ const Footer = () => {
 						Social Media
 					</div>
 					<div className="flex justify-around flex-wrap gap-4 w-full">
-						<div className="w-1/4 flex justify-center">
-							<a href="https://www.instagram.com/compsoc.vitcc/" target="_blank" rel="noreferrer">
-								<img src={instagram} alt="Instagram" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://discord.gg/6vkY3kcZnE" target="_blank" rel="noreferrer">
-								<img src={discord} alt="Discord" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://github.com/ComputerSocietyVITC" target="_blank" rel="noreferrer">
-								<img src={github} alt="Github" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://www.linkedin.com/company/ieee-computer-society-vit-chennai/" target="_blank" rel="noreferrer">
-								<img src={linkedin} alt="LinkedIn" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://www.youtube.com/channel/UCOgwDinZGau4rwv3swAe-nQ" target="_blank" rel="noreferrer">
-								<img src={youtube} alt="youtube" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://t.me/IEEE_CS_VIT_Chennai" target="_blank" rel="noreferrer">
-								<img src={telegram} alt="telegram" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://twitter.com/ieeecsvitc" target="_blank" rel="noreferrer">
-								<img src={twitter} alt="twitter" className="h-7 my-5" />
-							</a>
-						</div>
-						<div className="w-1/4 flex justify-center">
-							<a href="https://dev.to/ieeecsvitc" target="_blank" rel="noreferrer">
-								<img src={devto} alt="devto" className="h-7 my-5" />
-							</a>
-						</div>
+						{socialMediaLinks.map((link, index) => (
+								<div key={index} className="px-6 flex justify-center">
+									<a
+										href={link.url}
+										target="_blank"
+										rel="noreferrer"
+									>
+										<img
+											src={link.icon}
+											alt={link.platform}
+											className="h-7 my-5"
+										/>
+									</a>
+								</div>
+							))}
 					</div>
 				</div>
 			</div>
