@@ -13,10 +13,10 @@ const ImageAccordian = ({ itemms, setActiveItem }) => {
             {items.map((item, index) => {
             const isActive = active === index ? "active" : "";
             return (
-                <div className='rounded-[20px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[456px] text-center'>
+                <div className='rounded-[20px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[456px] items-center text-center'>
                 <div
                 key={item.header}
-                className={`image-accordion-item ${isActive}`}
+                className={`image-accordion-item  ${isActive}`}
                 onClick={() => handleToggle(index)}
                 >
                 <h2 className='out_content -rotate-90 flex'>{item.header}</h2>
