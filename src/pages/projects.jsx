@@ -20,9 +20,10 @@ const Project = () => {
     // Add more slides as needed
   ];
 
-  return (
-    <div className='min-h-screen bg-slate-950 container mx-auto py-10'>
-        <div className="text-white text-9xl font-bold text-center pb-16">Projects</div>
+  return (<><section className='min-h-screen text-white grid grid-cols-1 place-items-center'>
+    <><div section="">
+    <div className='w-screen px-12'>
+        <div className="text-white text-7xl font-bold text-center pb-24 -mt-24">Projects</div>
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -46,7 +47,8 @@ const Project = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </div></div></>
+    </section></>
   );
 };
 

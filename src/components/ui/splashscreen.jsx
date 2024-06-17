@@ -15,25 +15,14 @@ const SplashScreen = () => {
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 0.5, delay: 3 }}
-          style={{
-            backgroundColor: 'black',
-            width: '100vw',
-            height: '100vh',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            zIndex: 100
-          }}
+          transition={{ duration: 1, delay: 3 }}
+          className='absolute flex bg-black h-screen w-screen justify-center z-[100]'
           onAnimationComplete={onAnimationComplete} // Call onAnimationComplete when animation completes
         >
           <motion.img
             src={icon}
             alt="Icon"
-            style={{ width: '25%', height: 'auto' }}
+            className="self-center ml-36 scale-125"
           />
         </motion.div>
       )}

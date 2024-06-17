@@ -6,7 +6,7 @@ import Footer from "../components/footer";
 const Team = () => {
   return (
       <>
-        <div className='min-h-screen gradient  py-20 flex flex-col items-center'>
+        <div className='min-h-screen scale-80 py-36 flex flex-col items-center'>
           <h1 className='text-7xl text-white font-bold text-center pb-16'>Our Team</h1>
           <div className="w-full max-w-6xl mb-16 px-14" >
                       <div className='flex justify-around flex-wrap'>

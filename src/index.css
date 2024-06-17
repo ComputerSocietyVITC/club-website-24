@@ -87,17 +87,9 @@ div {
   margin: 0 auto;
 }
 
-.swiper-container {
-  height: 36rem;
-  padding: 2rem 0;
-  position: relative;
-}
 
-.swiper-slide {
-  width: 28rem;
-  height: 36rem;
-  position: relative;
-}
+
+
 
 .swiper-slide img {
   max-width: 600px;
@@ -157,9 +149,6 @@ div {
   object-fit: cover;
 }
 
-.gradient {
-    background: linear-gradient(to bottom, #0E1C31, #040414);
-}
 
 .img-hover:hover .img1 {
   transform: rotate(0deg);

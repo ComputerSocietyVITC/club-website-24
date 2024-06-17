@@ -3,11 +3,11 @@ import logo from '../ICON.png'; // Adjust the path to your image
 import { NavLink } from 'react-router-dom';
 const Header = ({ type }) => {
   return (
-    <header className={`w-full text-white p-4  bg-slate-950`}>
-      <div className="px-10 py-4 flex justify-between items-center relative ">
+    <header className="w-full text-white p-1 bg-transparent absolute">
+      <div className="px-10 py-4 mt-2 flex justify-between items-center relative ">
         <img src={logo} alt="IEEE Logo" className=" absolute h-12 w-12" />
         <nav className="flex-1">
-          <ul className="flex justify-end space-x-16 text-slate-500 my-2 font-bold font-montserrat text-xl ">
+          <ul className="flex justify-end space-x-16 text-slate-500 my-1 font-bold font-montserrat text-xl ">
             <li>
               <NavLink
                 to="/"
