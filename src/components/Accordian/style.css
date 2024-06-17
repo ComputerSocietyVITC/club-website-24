@@ -21,6 +21,8 @@
     opacity: 1;
     transition: 1s;
 }
+
+
 .image-accordion :is(h2) {
     margin: 0;
 }
@@ -52,7 +54,7 @@
   .image-accordion-item .out_content {
     width: 100px;
     z-index: 1;
-    padding: 35px 20px 20px 70px;
+    padding: 40px 20px 20px 70px;
     gap: 1px;
     transition: 0.5s;
   }
@@ -64,4 +66,19 @@
 .image-accordion-item.active .out_content {
     opacity: 0;
     visibility:hidden;
+}
+@media screen and (min-width: 1024px) and (max-width:1280px) {
+    .image-accordion-item {
+        width: 100px;
+    }
+    .image-accordion-item.active {
+        width: 150px;
+        opacity: 1;
+    }
+    .image-accordion-item.active .content {
+        opacity: 1;
+        visibility: visible;
+        padding:-20px;
+    }
+    
 }
