@@ -40,7 +40,7 @@ const Header = () => {
           </button>
           {isOpen && (
             <div className="absolute left-0 right-0 top-[3.5rem] p-5 mt-2 bg-gradient-to-t from-[#040414] to-[#0E1C31] border-b-2 border-b-slate-600">
-          <ul className="grid gap-3">
+          <ul className="grid gap-3" ref={ref}>
             {routes.map((route) => {
               return (
                 <li key={route.title}>
