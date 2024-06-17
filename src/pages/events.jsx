@@ -7,14 +7,15 @@ import 'swiper/css/navigation';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import { useNavigate } from 'react-router-dom';
 
-// Utility function to load images dynamically
 const importAll = (r) => {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item) => {
+        images[item.replace('./', '')] = r(item);
+        return null;
+    });
     return images;
-}
+};
 
-// Load all images from the events subfolders
 const images = importAll(require.context('../data/images/events', true, /main\.jpg$/));
 
 const Events = () => {
@@ -24,10 +25,10 @@ const Events = () => {
     const [currentEvent, setCurrentEvent] = useState('');
 
     useEffect(() => {
-        const eventSlides = Object.keys(images).map((key, index) => {
-            const eventName = `Event${index + 1}`;
-            return { src: images[key], eventName };
-        });
+        const eventSlides = Object.keys(images).map((key, index) => ({
+            src: images[key],
+            eventName: `Event${index + 1}`,
+        }));
         setSlides(eventSlides);
         if (eventSlides.length > 0) {
             setCurrentEvent(eventSlides[0].eventName);
@@ -39,14 +40,14 @@ const Events = () => {
     };
 
     const handleSlideChange = (swiper) => {
-        setCurrentEvent(slides[swiper.activeIndex].eventName);
+        setCurrentEvent(slides[swiper.activeIndex]?.eventName || '');
     };
 
     return (
         <div className="min-h-screen gradient events-container">
             <div className="text-white text-6xl font-bold text-center pt-12 pb-4">{currentEvent}</div>
             <Swiper
-                effect={"coverflow"}
+                effect="coverflow"
                 grabCursor={true}
                 centeredSlides={true}
                 loop={false}
@@ -57,7 +58,7 @@ const Events = () => {
                     depth: 100,
                     modifier: 1,
                 }}
-                pagination={{ el: '.swiper-pagination', clickable: true }}
+                pagination={{ clickable: true }}
                 modules={[Autoplay, EffectCoverflow, Pagination]}
                 className="swiper-container"
                 onSlideChange={handleSlideChange}
@@ -65,7 +66,7 @@ const Events = () => {
                     delay: 2000,
                     stopOnLastSlide: false,
                     disableOnInteraction: false,
-                    speed: 500
+                    speed: 500,
                 }}
             >
                 {slides.map((slide, index) => (
@@ -73,9 +74,7 @@ const Events = () => {
                         <img src={slide.src} alt={slide.eventName} />
                     </SwiperSlide>
                 ))}
-                <div className="slider-controler">
-                    <div className="swiper-pagination"></div>
-                </div>
+                <div className="swiper-pagination"></div>
             </Swiper>
             <button
                 className='border-2 border-solid border-teal-500 p-3 rounded-full bg-gradient-to-r from-b_col1 to-b_col2 float-end'

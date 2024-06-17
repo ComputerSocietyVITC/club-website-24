@@ -7,17 +7,17 @@ import 'swiper/css/navigation';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
 const Gallery = ({ slides }) => {
-    const [currentEvent, setCurrentEvent] = useState(slides[0].eventName);
+    const [currentEvent, setCurrentEvent] = useState(slides[0]?.eventName || '');
 
     const handleSlideChange = (swiper) => {
-        setCurrentEvent(slides[swiper.activeIndex].eventName);
+        setCurrentEvent(slides[swiper.activeIndex]?.eventName || '');
     };
 
     return (
         <div className="min-h-screen bg-slate-950 events-container">
             <div className="text-white text-9xl font-bold text-center pb-16">{currentEvent}</div>
             <Swiper
-                effect={"coverflow"}
+                effect="coverflow"
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
@@ -28,7 +28,7 @@ const Gallery = ({ slides }) => {
                     depth: 350,
                     modifier: 1,
                 }}
-                pagination={{ el: '.swiper-pagination', clickable: true }}
+                pagination={{ clickable: true }}
                 modules={[Autoplay, EffectCoverflow, Pagination]}
                 onSlideChange={handleSlideChange}
                 autoplay={{
@@ -50,9 +50,7 @@ const Gallery = ({ slides }) => {
                         </section>
                     </SwiperSlide>
                 ))}
-                <div className="slider-controler">
-                    <div className="swiper-pagination"></div>
-                </div>
+                <div className="swiper-pagination"></div>
             </Swiper>
         </div>
     );
