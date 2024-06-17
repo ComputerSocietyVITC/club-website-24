@@ -12,7 +12,6 @@ import Blogs from "./pages/blogs";
 
 function App() {
   return (
-  
   <BrowserRouter>
       <SplashScreen/>
       <Header />
