@@ -11,8 +11,9 @@ import devto from "../assets/socialmedia/devto.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-	return (
-		<div className="bg-slate-950 relative z-0 p-12 border-t-2">
+	return (<>
+		<div className="w-[90vw] border mx-auto"></div>
+		<div className="bg-transparent relative z-0 p-16 scale-90">
 			<footer className="font-montserrat">
 				<div className="text-gray-800 flex flex-wrap lg:flex-nowrap items-stretch">
 					
@@ -97,7 +98,7 @@ const Footer = () => {
 							Social Media
 						</div>
 						<div>
-						<div className="grid grid-cols-4 plac e-items-center">
+						<div className="grid grid-cols-4 place-items-center">
 							<div>
 								<a
 									href="https://www.instagram.com/compsoc.vitcc/"
@@ -207,7 +208,7 @@ const Footer = () => {
 					</div>
 				</div>
 			</footer>
-		</div>
+		</div></>
 	);
 };
 

@@ -7,7 +7,7 @@ const Blogs = () => {
 
     return (
         <>
-            <div className={"min-h-screen gradient flex flex-col items-center"}>
+            <div className="min-h-screen flex flex-col items-center scale-80 py-36">
                 <div className="text-white text-9xl font-bold text-center pb-16">Blogs</div>
 
                 <div className="w-full max-w-6xl mb-16">
