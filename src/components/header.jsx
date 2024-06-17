@@ -43,7 +43,7 @@ const Header = () => {
               return (
                 <li key={route.title}>
                   <NavLink
-                    className="p-2"
+                    className="m-2 text-l font-medium custom-underline hover:text-white link-activee"
                     to={route.href}
                     onClick={handleClick}
                   >
