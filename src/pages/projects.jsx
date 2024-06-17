@@ -4,7 +4,7 @@ import 'swiper/swiper-bundle.css';
 
 // Import Swiper modules
 import { Navigation, Pagination } from 'swiper/modules';
-import image12 from '../data/images/12.jpg';
+import image12 from '../data/images/events/event5/main.jpg';
 const Project = () => {
   const slides = [
     {

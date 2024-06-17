@@ -5,7 +5,7 @@
     align-items: center;
     gap: 12px;
     cursor: pointer;
-    font-family: 'montserrat';
+    font-family: 'Montserrat', sans-serif; /* Corrected font-family syntax */
 }
 
 .image-accordion-item {
@@ -14,14 +14,14 @@
     width: 120px;
     height: 450px;
     border-radius: 20px;
-    padding-bottom:70px;
     display: flex;
-    align-items: flex-end;
-    background: linear-gradient(to bottom,#061b24, #072031,#061b24);
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: linear-gradient(to bottom, #061b24, #072031, #061b24);
     opacity: 1;
     transition: 1s;
+    padding-top: 120px;
 }
-
 
 .image-accordion :is(h2) {
     margin: 0;
@@ -31,6 +31,7 @@
     font-size: 28px;
     font-weight: 700;
     color: #6CEDFF;
+    text-align: center; /* Center text */
 }
 
 .image-accordion-item.active {
@@ -41,44 +42,36 @@
 .image-accordion-item .content {
     position: absolute;
     width: auto;
-    top:40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0;
     visibility: hidden;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     display: flex;
+    flex-direction: column; /* Stack children vertically */
     align-items: center;
+    justify-content: center;
     gap: 14px;
     transition: 0.5s;
-  }
-  .image-accordion-item .out_content {
+}
+
+.image-accordion-item .out_content {
     width: 100px;
     z-index: 1;
-    padding: 40px 20px 20px 70px;
+    text-align: center;
+    padding: 35px 20px;
     gap: 1px;
     transition: 0.5s;
-  }
-  
+}
+
 .image-accordion-item.active .content {
     opacity: 1;
     visibility: visible;
 }
+
 .image-accordion-item.active .out_content {
     opacity: 0;
-    visibility:hidden;
-}
-@media screen and (min-width: 1024px) and (max-width:1280px) {
-    .image-accordion-item {
-        width: 100px;
-    }
-    .image-accordion-item.active {
-        width: 150px;
-        opacity: 1;
-    }
-    .image-accordion-item.active .content {
-        opacity: 1;
-        visibility: visible;
-        padding:-20px;
-    }
-    
+    visibility: hidden;
 }
