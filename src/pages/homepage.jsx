@@ -1,14 +1,15 @@
-import React,{useState} from "react";
+import React, { useState, useRef } from "react";
 import ImageAccordian from '../components/Accordian/imageAccordian'
 import Footer from "../components/footer";
 import items from './homedata'
-import {useRef} from 'react';
+import HAccord from "../components/Accordian/hAccord"
 const Homepage = () => {
     const [activeItem, setActiveItem] = useState(items[0]);
     const ref = useRef(null);
     const handleClick = () => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
-  };
+    
+};
     return (
         <>
             <div>
@@ -21,16 +22,16 @@ const Homepage = () => {
                         </h1>
                     
                 </div>  
-                <div className='min-h-screen flex flex-col justify-center items-center w-[80%] m-auto gap-y-6'>
+                <div className='min-h-screen flex flex-col justify-center items-center w-[80%] m-auto xl:gap-y-6 md:gap-y-2'>
                     <p className='text-white text-montserrat font-light text-[45px] max-[1px] tracking-[-0.025em] p-8 leading-25'>DISCOVER | DEVELOP | DEPLOY</p>
                     <button onClick={handleClick} className='border-2 border-solid border-teal-500 p-4 rounded-full bg-gradient-to-r from-b_col1  to-b_col2' >
                         <p className='text-teal-500 font-light text-2xl'>Gateway to Tech &#x25BC;</p>
                     </button>
                 </div>
-                <div ref={ref} className='min-h-screen h-[900px] pt-[12%]'>   {/*mt-[15%] pb-32 */}
+                <div className='h-[900px] pt-0 max-[1024px]:absolute opacity-0 lg:opacity-100'>   {/*mt-[15%] pb-32 */}
                     <div className='flex justify-center gap-[10%]'>
                         <ImageAccordian itemms={items} setActiveItem={setActiveItem}/>
-                        <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px] shadow-2xl shadow-[#7ac4ec]/30'>
+                        <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] xl:w-[430px] lg:w-[390px] md:w-[350px] shadow-2xl shadow-[#7ac4ec]/30'>
                             <div className='rounded-[calc(36px-1px)]  bg-gradient-to-b  from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[549px] relative' >
                             
                                 <div className='absolute -right-[100px] -bottom-14 z-15'>
@@ -46,6 +47,9 @@ const Homepage = () => {
                     </div>
                     
                     
+                </div>
+                <div className='mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute'>
+                <HAccord/>
                 </div>
             </div>
             <Footer />

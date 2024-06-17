@@ -19,8 +19,8 @@ const ImageAccordian = ({ itemms, setActiveItem }) => {
                 className={`image-accordion-item ${isActive}`}
                 onClick={() => handleToggle(index)}
                 >
-                <h2 className='out_content -rotate-90 flex'>{item.header}</h2>
-                <div className="content text-center">
+                <h2 className='out_content -rotate-90'>{item.header}</h2>
+                <div className="content -rotate-90 xl:rotate-0">
                     
                     <h2>{item.header}</h2>
                 </div>
