@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Team from "./pages/team";
 import Blogs from "./pages/blogs";
 
-
 function App() {
   return (
   <BrowserRouter>
@@ -17,7 +16,7 @@ function App() {
           <Route path="/" element={<Homepage />}/>
           <Route path="/team" element={<Team />}/>
           <Route path="/events" element={<Events />}/>
-          <Route path="/gallery" element={<Gallery />}/>
+          <Route path="/gallery/:event" element={<Gallery />}/>
           <Route path="/projects" element={<Projects />}/>
           <Route path="/blogs" element={<Blogs />}/>
       </Routes>

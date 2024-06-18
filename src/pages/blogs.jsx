@@ -5,6 +5,8 @@ import { getSortedBlogDataInDescendingOrder } from "./blogdata";
 const Blogs = () => {
     const sortedBlogData = getSortedBlogDataInDescendingOrder();
 
+    
+
     return (
         <>
             <div className="min-h-screen flex flex-col items-center scale-80 py-36">
