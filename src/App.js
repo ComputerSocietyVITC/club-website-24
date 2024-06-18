@@ -5,7 +5,6 @@ import Events from './pages/events';
 import Gallery from './pages/gallery';
 import Projects from './pages/projects';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SplashScreen from './components/ui/splashscreen';
 import Team from "./pages/team";
 import Blogs from "./pages/blogs";
 
@@ -13,7 +12,6 @@ import Blogs from "./pages/blogs";
 function App() {
   return (
   <BrowserRouter>
-      <SplashScreen/>
       <Header />
       <Routes>
           <Route path="/" element={<Homepage />}/>

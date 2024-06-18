@@ -12,6 +12,7 @@
 body {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;     /* Firefox */
+  scroll-behavior: smooth;
 }
 
 /* Optional: Ensure overflow behavior is maintained */
