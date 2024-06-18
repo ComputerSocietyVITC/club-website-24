@@ -1,14 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import icon from '../../assets/comsocLogowhite.svg'; // Import your icon image
-import { useState } from 'react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import icon from "../../assets/comsocLogowhite.png"; // Import your icon image
+import { useState } from "react";
 
 const SplashScreen = () => {
-    const [showSplash, setShowSplash] = useState(true);
-    const onAnimationComplete = () => {
-      setShowSplash(false);
-    };
+  const [showSplash, setShowSplash] = useState(true);
+  const onAnimationComplete = () => {
+    setShowSplash(false);
+  };
   return (
     <>
       {showSplash && (
@@ -16,8 +15,8 @@ const SplashScreen = () => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           transition={{ duration: 1, delay: 3 }}
-          className='absolute flex bg-black h-screen w-screen justify-center z-[100]'
-          onAnimationComplete={onAnimationComplete} // Call onAnimationComplete when animation completes
+          className="fixed flex bg-gradient-to-b from-[#000b11] from-2% via-[#072031] to-[#000b11] to-9% h-screen w-screen justify-center z-[100]"
+          onAnimationComplete={onAnimationComplete}
         >
           <motion.img
             src={icon}

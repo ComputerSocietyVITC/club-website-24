@@ -9,22 +9,21 @@
 .image-accordion-item {
     position: relative;
     overflow: hidden;
-    width: 120px;
+    width: 130px;
     height: 450px;
     border-radius: 20px;
     display: flex;
     text-align: center;
-    justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     background: linear-gradient(to bottom, #061b24, #072031, #061b24);
     opacity: 1;
-    transition: 1s;
+    transition: 2s;
 }
 
 
 
 .image-accordion-item h2 {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     color: #6CEDFF;
 }
@@ -57,5 +56,6 @@
 
 .image-accordion-item.active .out_content {
     opacity: 0;
+    padding: 30px;
     visibility: hidden;
 }
