@@ -176,7 +176,7 @@ const Footer = () => {
                 />
               </a>
             </div>
-            <div className="flex justify-center flex-col items-center mt-3">
+            <div className="flex justify-center flex-col items-center mt-3 max-[425px]:flex-col max-[425px]:space-x-0">
               <div className="text-center my-4">
                 <div className="text-lg text-white mb-3 custom-underline-gradient">
                   Address

@@ -59,3 +59,18 @@
     padding: 30px;
     visibility: hidden;
 }
+
+@media screen and (min-width: 1024px) and (max-width:1280px) {
+    .image-accordion-item {
+        width: 100px;
+    }
+    .image-accordion-item.active {
+        width: 150px;
+        opacity: 1;
+    }
+    .image-accordion-item.active .content {
+        opacity: 1;
+        visibility: visible;
+        padding:-20px;
+    }
+}

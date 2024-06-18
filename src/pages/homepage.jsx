@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import socialMediaLinks from "../data/socialMediaLinks";
+import HAccord from "../components/Accordian/hAccord"
 
 const items = [
   {
@@ -54,6 +55,7 @@ const Homepage = () => {
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+  
   return (
     <>
       <div>
@@ -89,7 +91,7 @@ const Homepage = () => {
         </div>
         <div
           ref={ref}
-          className="min-h-screen scale-[40%] lg:scale-100 flex flex-col justify-center items-center"
+          className="min-h-screen scale-[40%] lg:scale-100 flex-col justify-center items-center hidden lg:block"
         >
           {" "}
           {/*mt-[15%] pb-32 */}
@@ -173,10 +175,14 @@ const Homepage = () => {
                     )}
                   </p>
                 </div>
+                
               </div>
             </div>
           </div>
         </div>
+        <div className='mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute'>
+                <HAccord/> 
+                </div>
       </div>
       <Footer />
     </>
