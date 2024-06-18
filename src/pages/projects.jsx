@@ -4,7 +4,7 @@ import 'swiper/swiper-bundle.css';
 
 // Import Swiper modules
 import { Navigation, Pagination } from 'swiper/modules';
-import image12 from '../data/images/events/event5/main.jpg';
+import image12 from '../data/images/events/ros/DSC_0133.JPG';
 const Project = () => {
   const slides = [
     {
@@ -20,10 +20,10 @@ const Project = () => {
     // Add more slides as needed
   ];
 
-  return (<><section className='min-h-screen text-white grid grid-cols-1 place-items-center'>
+  return (<><section className='min-h-screen text-white grid grid-cols-1  place-items-center'>
     <><div section="">
     <div className='w-screen px-12'>
-        <div className="text-white text-7xl font-bold text-center pb-24 -mt-24">Projects</div>
+        <div className="text-white text-7xl font-bold text-center pb-16 mt-12">Projects</div>
       <Swiper
         modules={[Navigation, Pagination]}
         navigation
@@ -35,11 +35,11 @@ const Project = () => {
           <SwiperSlide key={index}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center ml-40">
               <div>
-                <img src={image12} alt={slide.title} className="w-full h-full object-cover" />
+                <img src={image12} alt={slide.title} className=" max-h-[500px] object-cover" />
               </div>
               <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[346px] w-[559px] shadow-2xl shadow-[#7ac4ec]/30'>
                 <div className='rounded-[calc(36px-1px)] p-12 bg-gradient-to-b from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[342px] flex flex-col justify-evenly text-center text-white'>
-                  <h2 className="text-4xl text-teal-500 font-semibold mb-4">{slide.title}</h2>
+                  <h2 className="text-4xl text-b_col3 font-semibold mb-4">{slide.title}</h2>
                   <p>{slide.description}</p>
                 </div>
               </div>
