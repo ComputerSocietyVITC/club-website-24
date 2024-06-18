@@ -45,7 +45,7 @@ const Events = () => {
         }
     };
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center justify-center">
+        <div className="min-h-screen bg-transparent flex flex-col items-center justify-center">
             <div className="text-white text-6xl font-bold text-center pt-14 pb-4">{currentEvent}</div>
             <Swiper
                 effect="coverflow"
