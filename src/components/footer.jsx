@@ -151,7 +151,7 @@ const Footer = () => {
 						<img src={comsocLogowhite} alt="IEEE CS VITC Logo" height={500} width={500} />
 					</a>
 				</div>
-				<div className="flex justify-center items-center mt-3 space-x-10">
+				<div className="flex max-[425px]:flex-col justify-center items-center mt-3 max-[425px]:space-x-0 space-x-10">
 					<div className="text-center">
 						<div className="text-lg text-white mb-3 custom-underline-gradient">
 							Address

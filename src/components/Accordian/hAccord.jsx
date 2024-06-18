@@ -22,28 +22,28 @@ const items = [
         header: "CONTACT",
         header2: "CONTACT",
         content: "contact details in the footer.",
-    },
+    }
 ];
 
 function HAccord() {
-    const [accord,setActiveAccord]=useState(-1);
-    
-    const toggleAccordion=(index) =>{
+    const [accord,setActiveAccord] = useState(-1);
+
+    const toggleAccordion=(index)=>{
         setActiveAccord(index);
     }
     return (
         <>
-        <div className='text-white h_accord_main flex flex-col items-center'>
-            {items.map((item,index) => {
+        <div className='text-white h_accord_main flex flex-col items-center'> {/* */}
+            {items.map((item, index) => {
                 return (
                     <div key={index} onClick={()=> toggleAccordion(index)} >
-                        <div className='flex justify-between p-6'>
+                        <div className='flex justify-between max-[640px]:justify-between p-6'>
                         <div className="h_accord_heading">
                             <h3 className={accord === index ? "active":""}>{item.header2}</h3>
                         </div>
                         <div>
                             { accord === index ? (<><span className='verticle'>-</span></>) : (<><span className='verticle'>+</span></>)}
-                            
+
                         </div>
                         </div>
                         <div>
