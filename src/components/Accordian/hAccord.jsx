@@ -34,7 +34,7 @@ function HAccord() {
     return (
         <>
         <div className='text-white h_accord_main flex flex-col items-center'> {/* */}
-            {items.map((item, index) => {
+        {items.map((item, index) => {
                 return (
                     <div key={index} onClick={()=> toggleAccordion(index)} >
                         <div className='flex justify-between max-[640px]:justify-between p-6'>
@@ -43,7 +43,7 @@ function HAccord() {
                         </div>
                         <div>
                             { accord === index ? (<><span className='verticle'>-</span></>) : (<><span className='verticle'>+</span></>)}
-
+                            
                         </div>
                         </div>
                         <div>

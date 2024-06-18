@@ -48,7 +48,7 @@ const Homepage = () => {
                     <p className='text-white text-montserrat font-light text-5xl p-16' >DISCOVER | DEVELOP | DEPLOY</p>
                     <button onClick={handleClick} className='border-2 border-[#05FFF0] p-4 rounded-full bg-gradient-to-r from-[#123838]  to-[#0C2B38] ' ><p className='text-[#6BEDFF]/[0.8] text-montserrat font-light text-2xl px-4'>Gateway to Tech &#x25BC;</p></button>
                 </div>
-                <div ref={ref} className='hidden min-h-screen lg:block lg:scale-75 xl:scale-100 flex-col justify-center items-center'>
+                <div ref={ref} className='hidden min-h-screen lg:block lg:scale-75 xl:scale-100 flex-col justify-center items-center'> {/*mt-[15%] pb-32 */}
                     <div className='flex justify-center gap-[10%]'>
                         <ImageAccordian itemms={items} setActiveItem={setActiveItem}/>
                         <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px]  shadow-2xl shadow-[#7ac4ec]/30'>
@@ -64,11 +64,10 @@ const Homepage = () => {
                             
                         </div>
                     </div>
-                    
-                    
                 </div>
                 <div className='mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute'>
-                <HAccord/>
+                <HAccord/> 
+                    
                 </div>
             </div>
             <Footer />
