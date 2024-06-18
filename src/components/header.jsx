@@ -14,7 +14,7 @@ const Header = () => {
     <header className={`w-screen text-white absolute z-50 bg-transparent`}>
       <div className="px-6 py-4 xl:px-8 xl:py-6 flex justify-between items-center relative">
         <NavLink to="/"><img src={logo} alt="IEEE Logo" className="h-12 w-12" /></NavLink>
-        <nav className="flex justify-end lg:hidden xl:hidden">
+        <nav className="flex justify-end xl:hidden">
           <button onClick={handleClick} className="flex flex-col justify-center items-center py-1">
             <span className={`bg-slate-400 block transition-all duration-300 ease-out 
                             h-0.5 w-6 rounded-sm ${isOpen ? 
