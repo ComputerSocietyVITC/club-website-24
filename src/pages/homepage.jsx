@@ -69,7 +69,7 @@ const Homepage = () => {
           </h1>
         </div>
         <div className="flex flex-col justify-center items-center min-h-screen">
-          <p className="text-white text-montserrat font-light text-5xl p-16 flex">
+          <p className="text-white text-montserrat font-light text-5xl p-16 grid grid-cols-5 place-items-center px-96">
             <AnimatedSection delay={0.5}>DISCOVER</AnimatedSection>
             <section className="mx-12">|</section>
             <AnimatedSection delay={1.5} className="mx-4">
@@ -180,9 +180,9 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div className='mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute'>
-                <HAccord/> 
-                </div>
+        <div className="mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute">
+          <HAccord />
+        </div>
       </div>
       <Footer />
     </>

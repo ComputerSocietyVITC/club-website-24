@@ -14,7 +14,7 @@ const SplashScreen = () => {
         <motion.div
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ duration: 1, delay: 3 }}
+          transition={{ duration: 1, delay: 1 }}
           className="fixed flex bg-gradient-to-b from-[#000b11] from-2% via-[#072031] to-[#000b11] to-9% h-screen w-screen justify-center z-[100]"
           onAnimationComplete={onAnimationComplete}
         >
