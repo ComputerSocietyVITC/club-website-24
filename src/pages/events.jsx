@@ -16,7 +16,7 @@ const importAll = (r) => {
     return images;
 };
 
-const images = importAll(require.context('../data/images/events', true, /main\.jpg$/));
+const images = importAll(require.context('../data/images/events', true, /main\.(jpg|JPG|png)$/));
 
 const Events = () => {
     const navigate = useNavigate();
@@ -25,9 +25,9 @@ const Events = () => {
     const [currentEvent, setCurrentEvent] = useState('');
 
     useEffect(() => {
-        const eventSlides = Object.keys(images).map((key, index) => ({
+        const eventSlides = Object.keys(images).map((key) => ({
             src: images[key],
-            eventName: `Event${index + 1}`,
+            eventName: key.split('/')[0],
         }));
         setSlides(eventSlides);
         if (eventSlides.length > 0) {
@@ -40,12 +40,13 @@ const Events = () => {
     };
 
     const handleSlideChange = (swiper) => {
-        setCurrentEvent(slides[swiper.activeIndex]?.eventName || '');
+        if (slides.length > 0) {
+            setCurrentEvent(slides[swiper.realIndex]?.eventName || '');
+        }
     };
-
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center justify-center">
-            <div className="text-white text-6xl font-bold text-center pt-12 pb-4">{currentEvent}</div>
+            <div className="text-white text-6xl font-bold text-center pt-14 pb-4">{currentEvent}</div>
             <Swiper
                 effect="coverflow"
                 grabCursor={true}
@@ -60,7 +61,7 @@ const Events = () => {
                 }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectCoverflow, Pagination]}
-                className="w-full max-w-6xl"
+                className="w-full max-w-7xl"
                 onSlideChange={handleSlideChange}
                 autoplay={{
                     delay: 2000,

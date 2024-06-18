@@ -18,10 +18,9 @@ const importAll = (r) => {
 
 const Gallery = () => {
     const { event } = useParams();
-
     const images = useMemo(() => {
         try {
-            return importAll(require.context(`../data/images/events`, true, /\.jpg$/));
+            return importAll(require.context(`../data/images/events`, true, /\.(jpg|png|JPG)$/));
         } catch (error) {
             console.error(`Error loading images for event: ${event}`, error);
             return {};
@@ -51,13 +50,14 @@ const Gallery = () => {
     return (
         <div className="min-h-screen bg-slate-950 events-container">
             <div className="pt-12 text-white text-7xl font-bold text-center pb-1">Gallery</div>
-            <div className="text-white text-5xl font-bold text-center pb-4">{currentEvent}</div>
+            <div className="text-white text-4xl font-bold text-center pb-4">{currentEvent}</div>
             <Swiper
                 effect="coverflow"
+                className="w-full max-w-8xl"
                 grabCursor={true}
                 centeredSlides={true}
                 loop={true}
-                slidesPerView={1}
+                slidesPerView={5}
                 breakpoints={{
                     540: {
                         slidesPerView: 1,
@@ -74,8 +74,8 @@ const Gallery = () => {
                 }}
                 coverflowEffect={{
                     rotate: -10,
-                    stretch: 20,
-                    depth: 350,
+                    stretch: 0,
+                    depth: 100,
                     modifier: 1,
                 }}
                 pagination={{ clickable: true }}
@@ -95,8 +95,9 @@ const Gallery = () => {
                                 src={slide.src}
                                 alt={slide.eventName}
                                 style={{ maxWidth: '100%' }}
+                                className="w-full h-[300px] object-cover"
                             />
-                            <section className='text-center py-12'>{slide.eventName}</section>
+                            <section className='text-center py-12'>TEMP</section>
                         </section>
                     </SwiperSlide>
                 ))}
