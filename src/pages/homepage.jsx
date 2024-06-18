@@ -54,7 +54,7 @@ const Homepage = () => {
                         <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px]  shadow-2xl shadow-[#7ac4ec]/30'>
                             <div className='rounded-[calc(36px-1px)]  bg-gradient-to-b  from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[549px] relative' >
                                 <div className='absolute -right-[100px] -bottom-14 z-15'>
-                            s</div>
+                            </div>
                                 <div className='flex flex-col rounded-[calc(36px-1px)] justify-evenly text-center backdrop-blur-sm z-20 w-[100%] h-[100%]'>
                                     <h2 className="text-4xl font-light text-center items-center text-teal-500">{activeItem.header}</h2>
                                     <p className='text-xl text-center items-center text-b_col3'>{activeItem.content3}</p>
