@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -18,13 +18,15 @@ const importAll = (r) => {
 
 const Gallery = () => {
     const { event } = useParams();
-    let images = {};
-    
-    try {
-        images = importAll(require.context(`../data/images/events`, true, /\.jpg$/));
-    } catch (error) {
-        console.error(`Error loading images for event: ${event}`, error);
-    }
+
+    const images = useMemo(() => {
+        try {
+            return importAll(require.context(`../data/images/events`, true, /\.jpg$/));
+        } catch (error) {
+            console.error(`Error loading images for event: ${event}`, error);
+            return {};
+        }
+    }, [event]);
 
     const [slides, setSlides] = useState([]);
     const [currentEvent, setCurrentEvent] = useState('');
@@ -48,7 +50,8 @@ const Gallery = () => {
 
     return (
         <div className="min-h-screen bg-slate-950 events-container">
-            <div className="pt-12 text-white text-7xl font-bold text-center pb-16">Gallery</div>
+            <div className="pt-12 text-white text-7xl font-bold text-center pb-1">Gallery</div>
+            <div className="text-white text-5xl font-bold text-center pb-4">{currentEvent}</div>
             <Swiper
                 effect="coverflow"
                 grabCursor={true}
@@ -91,7 +94,7 @@ const Gallery = () => {
                             <img
                                 src={slide.src}
                                 alt={slide.eventName}
-                                style={{maxWidth: '100%' }}
+                                style={{ maxWidth: '100%' }}
                             />
                             <section className='text-center py-12'>{slide.eventName}</section>
                         </section>
