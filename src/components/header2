@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../ICON.png';
 import { NavLink } from 'react-router-dom';
 import { routes } from '../data/routes';
-import { motion } from 'framer-motion';
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,9 +11,9 @@ const Header = () => {
   };
 
   return (
-    <header className={`w-full text-white absolute z-10`}>
+    <header className={`w-full text-white fixed z-10 ${!isOpen ? "border-b-2 border-b-slate-600" : ""}`}>
       <div className="px-6 py-4 xl:px-8 xl:py-6 flex justify-between items-center relative">
-        <NavLink to="/"><img src={logo} alt="IEEE Logo" className="h-12 w-12" /></NavLink>
+        <img src={logo} alt="IEEE Logo" className="h-12 w-12" />
         <nav className="flex-1 flex justify-end xl:hidden">
           <button onClick={handleClick} className="flex flex-col justify-center items-center p-4">
             <span className={`bg-slate-400 block transition-all duration-300 ease-out 
@@ -33,44 +33,32 @@ const Header = () => {
             </span>
           </button>
           {isOpen && (
-            <section onClick={handleClick} className="fixed flex flex-col items-center justify-center h-screen w-screen z-40 bg-black/[0.4] backdrop-blur-lg top-[-5px]">
-            <motion.section
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-              }}
-              transition={{
-                duration: 0.3,
-                delay: 0,
-                ease: "easeInOut",
-              }}
-              exit={{ opacity: 0 }}
-              className="backdrop-blur-xl shadow-slate-600 border border-white/[0.4] shadow-2xl flex flex-col items-center justify-center rounded-2xl py-4 px-8 min-w-screen"
-            >
+            <div className="absolute left-0 right-0 top-[3.5rem] p-5 mt-2 bg-gradient-to-t from-[#040414] to-[#0E1C31] border-b-2 border-b-slate-600">
+          <ul className="grid gap-3">
             {routes.map((route) => {
               return (
+                <li key={route.title}>
                   <NavLink
+                    className="m-2 text-l font-medium custom-underline hover:text-white link-activee"
                     to={route.href}
+                    onClick={handleClick}
                   >
-                    <section
-										onClick={handleClick}
-										className={`px-16 py-6 hover:bg-black hover:bg-opacity-10 rounded-md 
-									`}
-										id={route.title}
-									>{route.title}</section>
+                    {route.title}
                   </NavLink>
+                </li>
               );
             })}
-          </motion.section>
-          </section>)}
+          </ul>
+          </div>
+          )}
         </nav>
         <nav className="hidden xl:block flex-1">
-          <ul className="flex justify-end text-slate-300 my-1 font-regular font-montserrat text-xl ">
+          <ul className="flex justify-end space-x-16 text-slate-400 my-1 font-bold font-montserrat text-xl ">
             {routes.map((route, index) => (
               <li key={index}>
                 <NavLink
                   to={route.href}
-                  className="custom-underline hover:text-white mx-6"
+                  className="custom-underline hover:text-white"
                   activeClassName="link-activee"
                 >
                   {route.title}
