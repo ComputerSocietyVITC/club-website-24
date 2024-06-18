@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import ImageAccordian from '../components/Accordian/imageAccordian'
 import Footer from "../components/footer";
 import {useRef} from 'react';
-import HAccord from '../components/Accordian/hAccord';
 
 const items = [
     {
