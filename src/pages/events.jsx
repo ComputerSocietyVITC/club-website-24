@@ -60,7 +60,7 @@ const Events = () => {
                 }}
                 pagination={{ clickable: true }}
                 modules={[Autoplay, EffectCoverflow, Pagination]}
-                className="w-full max-w-5xl"
+                className="w-full max-w-6xl"
                 onSlideChange={handleSlideChange}
                 autoplay={{
                     delay: 2000,
@@ -71,7 +71,7 @@ const Events = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <img src={slide.src} alt={slide.eventName} className="w-full h-auto" />
+                        <img src={slide.src} alt={slide.eventName} className="w-full h-[500px] object-cover border-2 border-teal-500 rounded-xl " />
                     </SwiperSlide>
                 ))}
                 <div className="swiper-pagination"></div>
