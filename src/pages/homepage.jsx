@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import ImageAccordian from '../components/Accordian/imageAccordian'
 import Footer from "../components/footer";
 import {useRef} from 'react';
-
+import HAccord from "../components/Accordian/hAccord"
 const items = [
     {
         header: "ABOUT US",
@@ -44,14 +44,14 @@ const Homepage = () => {
                         </h1>
                     
                 </div>  
-                <div className='flex flex-col justify-center items-center min-h-screen'>
+                <div className='min-h-screen flex flex-col justify-center items-center w-[80%] m-auto gap-y-6'>
                     <p className='text-white text-montserrat font-light text-5xl p-16' >DISCOVER | DEVELOP | DEPLOY</p>
                     <button onClick={handleClick} className='border-2 border-[#05FFF0] p-4 rounded-full bg-gradient-to-r from-[#123838]  to-[#0C2B38] ' ><p className='text-[#6BEDFF]/[0.8] text-montserrat font-light text-2xl px-4'>Gateway to Tech &#x25BC;</p></button>
                 </div>
-                <div ref={ref} className='min-h-screen scale-[40%] lg:scale-100 flex flex-col justify-center items-center'>   {/*mt-[15%] pb-32 */}
+                <div ref={ref} className='hidden min-h-screen lg:block lg:scale-75 xl:scale-100 flex-col justify-center items-center'> {/*mt-[15%] pb-32 */}
                     <div className='flex justify-center gap-[10%]'>
                         <ImageAccordian itemms={items} setActiveItem={setActiveItem}/>
-                        <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px] shadow-2xl shadow-[#7ac4ec]/30'>
+                        <div className='rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px]  shadow-2xl shadow-[#7ac4ec]/30'>
                             <div className='rounded-[calc(36px-1px)]  bg-gradient-to-b  from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[549px] relative' >
                                 <div className='absolute -right-[100px] -bottom-14 z-15'>
                             </div>
@@ -64,7 +64,9 @@ const Homepage = () => {
                             
                         </div>
                     </div>
-                    
+                </div>
+                <div className='mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute'>
+                <HAccord/> 
                     
                 </div>
             </div>

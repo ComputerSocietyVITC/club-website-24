@@ -32,3 +32,14 @@
     line-height:1.4;
 
 }
+@media screen and (max-width:640px) {
+.h_accord_main >div {
+    background-image: linear-gradient(to bottom, #061b24 2%, #072031, #000b11 91%);
+    border: 2px solid #319795;
+    margin-bottom:20px;
+    padding:0px 5px;
+    border-radius:15px;
+    cursor:pointer;
+    min-width:200px;
+}
+}
