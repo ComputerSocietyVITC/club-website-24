@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* Hide scrollbars in WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   display: none;
@@ -10,19 +9,18 @@
 
 /* Hide scrollbars in other browsers (Firefox, Edge) */
 body {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
   scroll-behavior: smooth;
 }
 
 /* Optional: Ensure overflow behavior is maintained */
 
-
 /* If you need scrollable areas without scrollbars */
 .scrollable-container {
   overflow: auto; /* or overflow-y: auto; for vertical scrolling */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none;    /* Firefox */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrollable-container::-webkit-scrollbar {
@@ -30,7 +28,7 @@ body {
 }
 
 div {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .custom-underline {
@@ -60,7 +58,6 @@ div {
   stroke-width: 20;
 }
 
-
 /* index.css */
 .custom-underline-gradient {
   display: inline-block;
@@ -68,7 +65,7 @@ div {
 }
 
 .custom-underline-gradient::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 2px; /* Adjust the thickness of the underline */
@@ -88,40 +85,10 @@ div {
   margin: 0 auto;
 }
 
-
-
-
-.blog-card {
-  max-width: 300px;
-}
-
-.blog-title {
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-bottom: 0.5rem;
-}
-
-.blog-date {
-  color: rgb(209 213 219);
-  margin-bottom: 1rem;
-}
-
-.blog-image {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-
 .img-hover:hover .img1 {
   transform: rotate(0deg);
-  width:200px;
-  height:200px;
-  border-radius:45%;
-  transition:0.5s;
-}
-
-header {
-  background: #0E1C31;
+  width: 200px;
+  height: 200px;
+  border-radius: 45%;
+  transition: 0.5s;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./style.css";
-import items from "../../pages/homedata";
+import items from "../../data/homedata";
 
 const ImageAccordian = ({ itemms, setActiveItem }) => {
   const [active, setActive] = useState(0);
