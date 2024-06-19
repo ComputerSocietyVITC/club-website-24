@@ -164,7 +164,7 @@ const Homepage = () => {
         <div className="mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute min-h-screen">
           <HAccord />
         </div>
-        <div className="min-h-screen flex justify-center items-center">
+        <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center">
           {routes.map((data, idx) =>
             idx === 0 ? null : <HomepageRouterCircles route={data} />
           )}
