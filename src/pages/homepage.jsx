@@ -5,33 +5,12 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import socialMediaLinks from "../data/socialMediaLinks";
-import HAccord from "../components/Accordian/hAccord"
+import HAccord from "../components/Accordian/hAccord";
+import { routes } from "../data/routes";
+import HomepageRouterCircles from "../components/homepageroutercircles";
+import items from "../data/homedata";
 
-const items = [
-  {
-    header: "About Us",
-    content3:
-      "IEEE Computer Society VIT Chennai is a zealous community of diverse minds striving to Learn, Create (sometimes Break!), Develop, and Explore. Here we combine an infectious desire to grow together, and a stubborn persistence to keep going, with a healthy ambition for the next audacious challenge. Come join us on this journey!",
-  },
-
-  {
-    header: "Our Vision",
-    content3:
-      "At IEEE Computer Society VITC, our belief is grounded in the principles of mutual learning and growth. We believe in empowering the community to innovate, develop, create, and to empower itself, which for us is, the greatest Return on Investment for a Technical Society. With a transcendent passion for Tech, and a solemn cognizance of people's struggles, we aspire to solve the great problems of today, and prepare together for a brighter tomorrow.",
-  },
-
-  {
-    header: "Newsletter",
-    content3:
-      " Want to stay updated with the latest news about IEEE CS VITC? Enter you email address and allow notifications.",
-  },
-  {
-    header: "Contact",
-    content3: "",
-  },
-];
-
-const AnimatedSection = ({ children, delay }) => {
+const AnimatedSection = ({ children, delay, className }) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
     threshold: 0.3, // Trigger when 50% of the element is in view
@@ -39,8 +18,9 @@ const AnimatedSection = ({ children, delay }) => {
 
   return (
     <motion.section
+      className={className}
       ref={ref}
-      initial={{ opacity: 0, y: 20 }} // Start from opacity 0 and 10 pixels above
+      initial={{ opacity: 0, y: 40 }} // Start from opacity 0 and 10 pixels above
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }} // Animate to opacity 1 and natural position
       transition={{ duration: 0.5, delay: delay }}
     >
@@ -55,21 +35,25 @@ const Homepage = () => {
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
-  
+
   return (
     <>
       <div>
         <div className="container mx-auto grid grid-cols-1 items-center justify-center min-h-screen ">
           <h1 className="lg:text-7xl text-4xl font-bold text-center text-[#7DFEF7]">
-            We are The
-            <br />
-            IEEE Computer Society
-            <br />
-            VIT Chennai...
+            <AnimatedSection delay={2} className="my-4">
+              We are The
+            </AnimatedSection>
+            <AnimatedSection delay={3} className="my-4">
+              IEEE Computer Society
+            </AnimatedSection>
+            <AnimatedSection delay={4} className="my-4">
+              VIT Chennai...
+            </AnimatedSection>
           </h1>
         </div>
         <div className="flex flex-col justify-center items-center min-h-screen">
-          <p className="text-white text-montserrat font-light text-5xl p-16 flex">
+          <p className="text-white text-montserrat font-light text-5xl p-16 grid grid-cols-5 place-items-center px-96">
             <AnimatedSection delay={0.5}>DISCOVER</AnimatedSection>
             <section className="mx-12">|</section>
             <AnimatedSection delay={1.5} className="mx-4">
@@ -91,10 +75,8 @@ const Homepage = () => {
         </div>
         <div
           ref={ref}
-          className="min-h-screen scale-[40%] lg:scale-100 flex-col justify-center items-center hidden lg:block"
+          className="min-h-screen scale-[40%] lg:scale-100 flex-col justify-center items-center hidden lg:flex"
         >
-          {" "}
-          {/*mt-[15%] pb-32 */}
           <div className="flex justify-around px-16 w-full">
             <ImageAccordian itemms={items} setActiveItem={setActiveItem} />
             <div className="rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px] shadow-2xl shadow-[#7ac4ec]/30">
@@ -116,9 +98,9 @@ const Homepage = () => {
                       <>
                         <input
                           type="email"
-                          className="border-2 border-teal-300/[0.8] bg-gradient-to-r from-[#123838]  to-[#0C2B38] rounded-lg my-8 text-md px-2 py-1 w-full text-center "
+                          className="border-2 border-teal-300/[0.8] bg-gradient-to-r from-[#123838]  to-[#0C2B38] rounded-lg mt-12 mb-3  text-md px-2 py-1 w-full text-center "
                         />
-                        <button className="border-2 border-cyan-100/[0.6] bg-gradient-to-r from-[#123838]  to-[#0C2B38] rounded-2xl my-4 text-xl px-4 p-2 text-center text-blue-100/[0.8]">
+                        <button className="hover:scale-110 duration-200 transition border-2 border-cyan-100/[0.6] bg-gradient-to-r from-[#123838]  to-[#0C2B38] rounded-2xl my-4 text-xl px-4 p-2 text-center text-blue-100/[0.8]">
                           Subscribe
                         </button>{" "}
                         {/*make sure to call a POST method*/}
@@ -175,14 +157,18 @@ const Homepage = () => {
                     )}
                   </p>
                 </div>
-                
               </div>
             </div>
           </div>
         </div>
-        <div className='mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute'>
-                <HAccord/> 
-                </div>
+        <div className="mt-0 pb-16 mx-32 opacity-100 lg:hidden lg:absolute min-h-screen">
+          <HAccord />
+        </div>
+        <div className="min-h-screen flex justify-center items-center">
+          {routes.map((data, idx) =>
+            idx === 0 ? null : <HomepageRouterCircles route={data} />
+          )}
+        </div>
       </div>
       <Footer />
     </>
