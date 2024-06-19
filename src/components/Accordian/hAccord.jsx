@@ -1,29 +1,6 @@
 import React, { useState } from "react";
 import "./style_h.css";
-const items = [
-  {
-    header: "ABOUT US",
-    header2: "ABOUT US",
-    content: "this is about us.",
-  },
-
-  {
-    header: "OUR VISION",
-    header2: "OUR VISION",
-    content: "this is our vision.",
-  },
-
-  {
-    header: "NEWSLETTER",
-    header2: "NEWSLETTER",
-    content: "this is Newsssss.",
-  },
-  {
-    header: "CONTACT",
-    header2: "CONTACT",
-    content: "contact details in the footer.",
-  },
-];
+import items from "../../data/homedata";
 
 function HAccord() {
   const [accord, setActiveAccord] = useState(-1);
@@ -42,7 +19,7 @@ function HAccord() {
               <div className="flex justify-between max-[640px]:justify-between p-6">
                 <div className="h_accord_heading">
                   <h3 className={accord === index ? "active" : ""}>
-                    {item.header2}
+                    {item.header}
                   </h3>
                 </div>
                 <div>
@@ -59,7 +36,7 @@ function HAccord() {
               </div>
               <div>
                 <p className={accord === index ? "active" : "inactive"}>
-                  {item.content}
+                  {item.content3}
                 </p>
               </div>
             </div>

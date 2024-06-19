@@ -28,7 +28,7 @@ const Project = () => {
         <>
           <div section="">
             <div className="w-screen px-12">
-              <div className="text-white text-7xl font-bold text-center pb-16 mt-12">
+              <div className="text-white text-7xl font-bold text-center pb-16">
                 Projects
               </div>
               <Swiper

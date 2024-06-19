@@ -41,13 +41,13 @@ const Homepage = () => {
       <div>
         <div className="container mx-auto grid grid-cols-1 items-center justify-center min-h-screen ">
           <h1 className="lg:text-7xl text-4xl font-bold text-center text-[#7DFEF7]">
-            <AnimatedSection delay={2} className="my-4">
+            <AnimatedSection delay={1} className="my-4">
               We are The
             </AnimatedSection>
-            <AnimatedSection delay={3} className="my-4">
+            <AnimatedSection delay={2} className="my-4">
               IEEE Computer Society
             </AnimatedSection>
-            <AnimatedSection delay={4} className="my-4">
+            <AnimatedSection delay={3} className="my-4">
               VIT Chennai...
             </AnimatedSection>
           </h1>
@@ -66,7 +66,7 @@ const Homepage = () => {
           </p>
           <button
             onClick={handleClick}
-            className="border-2 border-[#05FFF0] p-4 rounded-full bg-gradient-to-r from-[#123838]  to-[#0C2B38] "
+            className="border-2 border-[#00cabc] p-4 rounded-full bg-gradient-to-r from-[#123838]  to-[#0C2B38] "
           >
             <p className="text-[#6BEDFF] text-montserrat font-light text-2xl px-4">
               Gateway to Tech &#x25BC;
