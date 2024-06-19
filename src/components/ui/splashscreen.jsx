@@ -21,7 +21,7 @@ const SplashScreen = () => {
           <motion.img
             src={icon}
             alt="Icon"
-            className="self-center ml-36 scale-125"
+            className="self-center scale-50"
           />
         </motion.div>
       )}
