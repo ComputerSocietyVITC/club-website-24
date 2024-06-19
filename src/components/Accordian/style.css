@@ -41,17 +41,21 @@
     z-index: 1;
     opacity: 0;
     transition: 0.5s;
+    display:none;
 }
 
 .image-accordion-item .out_content {
     z-index: 1;
     text-align: center;
     transition: 0.5s;
+    padding:0px 20px;
+    
 }
 
 .image-accordion-item.active .content {
     opacity: 1;
     visibility: visible;
+    display:block;
 }
 
 .image-accordion-item.active .out_content {
@@ -72,5 +76,6 @@
         opacity: 1;
         visibility: visible;
         padding:-20px;
+        
     }
 }
