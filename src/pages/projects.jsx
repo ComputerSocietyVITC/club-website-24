@@ -40,14 +40,12 @@ const Project = () => {
               >
                 {slides.map((slide, index) => (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center ml-40">
-                      <div>
-                        <img
-                          src={image12}
-                          alt={slide.title}
-                          className=" max-h-[500px] object-cover"
-                        />
-                      </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center place-items-center">
+                      <img
+                        src={image12}
+                        alt={slide.title}
+                        className=" max-h-[500px]"
+                      />
                       <div className="rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[346px] w-[559px] shadow-2xl shadow-[#7ac4ec]/30">
                         <div className="rounded-[calc(36px-1px)] p-12 bg-gradient-to-b from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[342px] flex flex-col justify-evenly text-center text-white">
                           <h2 className="text-4xl text-b_col3 font-semibold mb-4">

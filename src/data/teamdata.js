@@ -1,3 +1,5 @@
+import image from "./images/shashwat.png"
+
 const myTeam = [
   {
     name: "Harshit Kumar Singh",
@@ -29,7 +31,7 @@ const myTeam = [
     imageUrl:
       "https://media.licdn.com/dms/image/D5603AQEEENE9sTgaUw/profile-displayphoto-shrink_800_800/0/1707332074112?e=1724284800&v=beta&t=GFPcQ4H6B7lr5N1c1crfdIJZA6OR2Rvhfe4ZUK483-0",
     linkUrl: "https://www.linkedin.com/in/sandeep-ravisankar-9113a5271/",
-    gitUrl: "",
+    gitUrl: "https://github.com/sandman-04",
   },
   {
     name: "Anirudh Sridhar",
@@ -72,7 +74,7 @@ const myTeam = [
   {
     name: "Shashwat Mishra",
     desig: "Projects Head",
-    imageUrl: "",
+    imageUrl: image,
     linkUrl: "",
     gitUrl: "https://github.com/Shashwatm74",
   },

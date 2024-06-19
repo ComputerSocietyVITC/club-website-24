@@ -14,7 +14,7 @@ const Teamcard2 = ({ name, desig, imageUrl, linkUrl, gitUrl }) => {
         ref={ref}
         initial={{ opacity: 0, y: 100 }} // Start from opacity 0 and 10 pixels above
         animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }} // Animate to opacity 1 and natural position
-        transition={{ duration: 0.5, delay: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[300px] m-4 col-span-1 cursor-pointer  hover:shadow-2xl hover:shadow-[#7ac4ec]/30"
       >
         <div className="rounded-[calc(36px-1px)] p-[30px] bg-gradient-to-b  from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[549px] ">
