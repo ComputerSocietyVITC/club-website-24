@@ -56,7 +56,7 @@ const Events = () => {
   };
 
   return  (
-    <div className="relative min-h-screen bg-transparent flex flex-col pl-4 ml-4 items-center justify-center">
+    <div className="relative min-h-screen bg-transparent flex flex-col ml-4 items-center justify-center">
       {isMobile ? (
         <div className="w-full max-w-6xl px-4">
         {slides.map((slide, index) => (
@@ -101,7 +101,7 @@ const Events = () => {
             }}
             pagination={{ clickable: true }}
             modules={[Autoplay, EffectCoverflow, Pagination]}
-            className="w-full max-w-5xl"
+            className="w-full max-w-5xl "
             onSlideChange={handleSlideChange}
             autoplay={{
               delay: 2000,
