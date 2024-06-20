@@ -28,6 +28,8 @@ const items = [
   },
 ];
 
+
+
 function HAccord() {
   const [accord, setActiveAccord] = useState(-1);
 
@@ -45,7 +47,7 @@ function HAccord() {
               <div className="flex justify-between max-[640px]:justify-between p-6 max-[640px]:p-3">
                 <div className="h_accord_heading">
                   <h3 className={accord === index ? "active" : ""}>
-                    {item.header2}
+                    {item.header}
                   </h3>
                 </div>
                 <div>
@@ -62,7 +64,7 @@ function HAccord() {
               </div>
               <div>
                 <p className={accord === index ? "active" : "inactive"}>
-                  {item.content}
+                  {item.content3}
                 </p>
               </div>
             </div>

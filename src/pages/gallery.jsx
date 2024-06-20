@@ -50,36 +50,35 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 events-container">
-      <div className="pt-12 text-white text-7xl font-bold text-center pb-1">
+    <div className="min-h-screen bg-transparent events-container flex flex-col items-center">
+      <div className="pt-12 text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-1">
         Gallery
       </div>
-      <div className="text-white my-8 text-6xl font-light text-center pb-4">
-        {currentEvent}
+      <div className="text-white my-8 text-3xl md:text-5xl lg:text-6xl font-light text-center pb-4">
+        {currentEvent.toUpperCase()}
       </div>
       <Swiper
         effect="coverflow"
-        className="w-full max-w-8xl"
+        className="w-full max-w-8xl "
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={5}
         breakpoints={{
-          540: {
+          320: {
             slidesPerView: 1,
           },
-          768: {
+          640: {
             slidesPerView: 2,
           },
           1024: {
             slidesPerView: 3,
           },
           1280: {
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
         }}
         coverflowEffect={{
-          rotate: -10,
+          rotate: 0,
           stretch: 0,
           depth: 100,
           modifier: 1,
@@ -89,22 +88,23 @@ const Gallery = () => {
         onSlideChange={handleSlideChange}
         autoplay={{
           delay: 5000,
-          stopOnLastSlide: true,
-          disableOnInteraction: true,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
           speed: 200,
         }}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <section className="bg-[#f4f3e9] px-4 pt-4 flex flex-col items-center justify-center">
-              <img
-                src={slide.src}
-                alt={slide.eventName}
-                style={{ maxWidth: "100%" }}
-                className="w-full h-[400px] object-cover"
-              />
-              <section className="text-center py-12">Description</section>
-            </section>
+            <div className="bg-white p-4 flex flex-col items-center rounded-lg shadow-lg w-full">
+              <div className="w-full aspect-1 flex items-center justify-center">
+                <img
+                  src={slide.src}
+                  alt={slide.eventName}
+                  className="max-h-96 object-contain"
+                />
+              </div>
+              <div className="text-center py-4 text-black">Description</div>
+            </div>
           </SwiperSlide>
         ))}
         <div className="swiper-pagination"></div>
