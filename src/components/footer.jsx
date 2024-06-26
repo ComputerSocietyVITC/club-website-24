@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="w-[90vw] border mx-auto"></div>
       <div className="bg-transparent relative z-0 p-16 scale-90">
         <footer className="font-montserrat">
-          <div className="text-gray-800 hidden lg:grid lg:grid-cols-4 items-center place-items-center">
+          <div className="text-gray-800 hidden xl:grid xl:grid-cols-4 items-center place-items-center">
             <a
               href="https://ieeecsvitc.com"
               className="self-center order-4 lg:order-1 md:flex-col md:flex sm:flex sm:flex-col"
