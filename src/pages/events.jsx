@@ -61,7 +61,7 @@ const Events = () => {
     <div className="relative min-h-screen bg-transparent flex flex-col ml-4 items-center justify-center py-36">
       {isMobile ? (
         <div>
-          <div className="text-white text-7xl font-bold text-center pb-16">Events</div>
+          <div className="text-white text-7xl font-bold text-center pb-24">Events</div>
             <div className="w-full max-w-6xl px-8">
               {slides.map((slide, index) => (
                 <div key={index} className="my-16">
