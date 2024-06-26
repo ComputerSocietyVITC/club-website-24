@@ -11,39 +11,39 @@ const Team = () => {
           Our Team
         </h1>
         <div className="w-full max-w-6xl mb-16 px-14">
-          <div className="flex justify-around flex-wrap">
-            {myTeam.slice(0, 2).map((teamm, mem) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-18 md:gap-x-20 p-4 justify-items-center">
+            {myTeam.slice(0, 2).map((team, mem) => (
               <Teamcard
-                key={teamm.name}
-                name={teamm.name}
-                desig={teamm.desig}
-                imageUrl={teamm.imageUrl}
-                linkUrl={teamm.linkUrl}
-                gitUrl={teamm.gitUrl}
+                key={team.name}
+                name={team.name}
+                desig={team.desig}
+                imageUrl={team.imageUrl}
+                linkUrl={team.linkUrl}
+                gitUrl={team.gitUrl}
               />
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-18 md:gap-x-20 p-4 justify-items-center">
-            {myTeam.slice(2, 8).map((teamm, mem) => (
+            {myTeam.slice(2, 8).map((team, mem) => (
               <Teamcard2
-                key={teamm.name}
-                name={teamm.name}
-                desig={teamm.desig}
-                imageUrl={teamm.imageUrl}
-                linkUrl={teamm.linkUrl}
-                gitUrl={teamm.gitUrl}
+                key={team.name}
+                name={team.name}
+                desig={team.desig}
+                imageUrl={team.imageUrl}
+                linkUrl={team.linkUrl}
+                gitUrl={team.gitUrl}
               />
             ))}
           </div>
-          <div className="flex justify-around flex-wrap">
-            {myTeam.slice(8).map((teamm, mem) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-18 md:gap-x-20 p-4 justify-items-center">
+            {myTeam.slice(8).map((team, mem) => (
               <Teamcard
-                key={teamm.name}
-                name={teamm.name}
-                desig={teamm.desig}
-                imageUrl={teamm.imageUrl}
-                linkUrl={teamm.linkUrl}
-                gitUrl={teamm.gitUrl}
+                key={team.name}
+                name={team.name}
+                desig={team.desig}
+                imageUrl={team.imageUrl}
+                linkUrl={team.linkUrl}
+                gitUrl={team.gitUrl}
               />
             ))}
           </div>
