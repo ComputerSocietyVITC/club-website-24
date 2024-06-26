@@ -36,20 +36,18 @@ const items = [
     header: "CONTACT",
     content: (
       <div className="contact-content">
-        <div>
-          <div className="flex flex-col">
-            <div className="text-lg sm:self-center md:self-center lg:text-base text-blue-200 inline-block mb-3 font-bold">
-              Email
-            </div>
-            <a
-              href="mailto:ieeecomputersociety@vit.ac.in"
-              target="_blank"
-              rel="noreferrer"
-              className="my-3 block text-white hover:text-white/[0.8] text-base lg:text-lg lg:text-left hover:scale-125 transition duration-200"
-            >
-              ieeecomputersociety@vit.ac.in
-            </a>
+        <div className="flex flex-col">
+          <div className="text-lg sm:self-center md:self-center lg:text-base text-blue-200 inline-block mb-3 font-bold">
+            Email
           </div>
+          <a
+            href="mailto:ieeecomputersociety@vit.ac.in"
+            target="_blank"
+            rel="noreferrer"
+            className="my-3 block text-white hover:text-white/[0.8] text-base lg:text-lg lg:text-left hover:scale-125 transition duration-200"
+          >
+            ieeecomputersociety@vit.ac.in
+          </a>
         </div>
         <div className="my-4 w-full flex flex-col justify-center lg:order-4">
           <div className="text-lg lg:text-base lg:text-center text-blue-200 inline-block mb-3 md:self-center sm:self-center font-bold">
