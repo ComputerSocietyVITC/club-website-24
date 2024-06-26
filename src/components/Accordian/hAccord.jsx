@@ -64,7 +64,7 @@ function HAccord() {
               </div>
               <div>
                 <p className={accord === index ? "active" : "inactive"}>
-                  {item.content3}
+                  {item.content}
                 </p>
               </div>
             </div>
