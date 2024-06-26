@@ -21,7 +21,6 @@ const ImageAccordian = ({ itemms, setActiveItem }) => {
                 key={item.header}
                 className={`image-accordion-item ${isActive}`}
                 onMouseEnter={() => handleToggle(index)}
-                onMouseLeave={() => setActive(null)}
               >
                 <h2 className="out_content -rotate-90 self-center">
                   {item.header}
