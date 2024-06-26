@@ -25,10 +25,10 @@ const Teamcard2 = ({ name, desig, imageUrl, linkUrl, gitUrl }) => {
               alt="none"
             />
             <div className=" flex flex-col ">
-              <h2 className="text-white text-4xl font-bold text-center">
+              <h2 className="text-white text-2xl font-bold text-center">
                 {name}
               </h2>
-              <h3 className="text-b_col3 text-2xl font-thin text-center">
+              <h3 className="text-b_col3 text-xl font-thin text-center pt-2">
                 {desig}
               </h3>
               <div className="flex justify-center gap-x-6 ">
