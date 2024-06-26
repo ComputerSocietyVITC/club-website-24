@@ -17,7 +17,7 @@
     align-items: center; /* Center vertically */
     background: linear-gradient(to bottom, #061b24, #072031, #061b24);
     opacity: 1;
-    transition: 2s;
+    transition: width 2s, opacity 2s;
 }
 
 
@@ -40,14 +40,14 @@
     transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s;
     display:none;
 }
 
 .image-accordion-item .out_content {
     z-index: 1;
     text-align: center;
-    transition: 0.5s;
+    transition: opacity 0.5s, padding 0.5s;
     padding:0px 20px;
     
 }

@@ -1,46 +1,47 @@
 .h_accord_main .inactive {
-    display:none;
+    display: none;
 }
 
 .h_accord_main >div {
     background-image: linear-gradient(to bottom, #061b24 2%, #072031, #000b11 91%);
     border: 2px solid #319795;
-    margin-bottom:20px;
-    padding:0px 20px;
-    border-radius:15px;
-    cursor:pointer;
-    width:80%;
-    
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 100%;
 }
+
 .h_accord_heading {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .h_accord_heading .active {
-    color:#05FFF0;
+    color: #05FFF0;
 }
+
 .h_accord_heading h3 {
-    color:rgb(20 184 166 / var(--tw-border-opacity));
-    font-weight:600;
-    font-size:larger;
+    color: rgb(20 184 166 / var(--tw-border-opacity));
+    font-weight: 600;
+    font-size: larger;
 }
+
 .h_accord_main p {
-    margin:2px;
     padding: 20px;
     text-align:center;
     color:#05FFF0;
-    line-height:1.4;
+}
 
-}
 @media screen and (max-width:640px) {
-.h_accord_main >div {
-    background-image: linear-gradient(to bottom, #061b24 2%, #072031, #000b11 91%);
-    border: 2px solid #319795;
-    margin-bottom:20px;
-    padding:0px 5px;
-    border-radius:15px;
-    cursor:pointer;
-    min-width:250px;
-}
+    .h_accord_main >div {
+        background-image: linear-gradient(to bottom, #061b24 2%, #072031, #000b11 91%);
+        border: 2px solid #319795;
+        margin-bottom:20px;
+        padding:0px 5px;
+        border-radius:15=6px;
+        cursor:pointer;
+        min-width:250px;
+    }
 }
