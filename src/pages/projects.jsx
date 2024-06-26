@@ -2,29 +2,13 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Navigation, Pagination } from "swiper/modules";
-import image12 from "../data/images/events/ros/DSC_0133.JPG";
+import slides from "../data/projectdata";
 
 const Project = () => {
-  const slides = [
-    {
-      title: "Project Name 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius lacinia dolor eget dapibus. Fusce interdum risus nunc, nec iaculis sapien tincidunt et. Nullam vel fringilla eros, id mollis ex. Praesent aliquam est sit amet lorem aliquam egestas. Sed consequat, quam a dapibus tempor, purus lorem aliquam leo, sed venenatis.",
-      img: image12,
-    },
-    {
-      title: "Project Name 2",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius lacinia dolor eget dapibus. Fusce interdum risus nunc, nec iaculis sapien tincidunt et. Nullam vel fringilla eros, id mollis ex. Praesent aliquam est sit amet lorem aliquam egestas. Sed consequat, quam a dapibus tempor, purus lorem aliquam leo, sed venenatis.",
-      img: image12,
-    },
-    // Add more slides as needed
-  ];
-
   return (
     <section className="min-h-screen text-white grid grid-cols-1 place-items-center">
       <div className="w-full px-6 md:px-12">
-        <div className="text-4xl md:text-7xl font-bold text-center mt-16 mb-8">
+        <div className="text-4xl md:text-7xl font-bold text-center my-16">
           Projects
         </div>
         <Swiper
