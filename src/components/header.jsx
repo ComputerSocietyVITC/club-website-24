@@ -87,8 +87,11 @@ const Header = () => {
               <li key={index}>
                 <NavLink
                   to={route.href}
-                  className="custom-underline hover:text-white mx-6"
-                  activeClassName="link-activee"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'custom-underline hover:text-white mx-6 active-link'
+                      : 'custom-underline hover:text-white mx-6'
+                  }
                 >
                   {route.title}
                 </NavLink>
