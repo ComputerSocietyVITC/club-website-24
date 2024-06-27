@@ -52,7 +52,7 @@ const Header = () => {
           <img src={logo} alt="IEEE Logo" className="h-12 w-12" />
         </NavLink>
 
-        <nav className="lg:hidden">
+        <nav className="xl:hidden">
           <button
             onClick={handleClick}
             className="flex flex-col justify-center items-center py-1"
