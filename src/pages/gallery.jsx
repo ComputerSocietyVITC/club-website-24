@@ -51,11 +51,8 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-transparent events-container flex flex-col items-center">
-      <div className="pt-12 text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-1">
-        Gallery
-      </div>
-      <div className="text-white my-8 text-3xl md:text-5xl lg:text-6xl font-light text-center pb-4">
-        {currentEvent.toUpperCase()}
+      <div className="pt-16 text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-24">
+      {currentEvent.toUpperCase()} Gallery
       </div>
       <Swiper
         effect="coverflow"
