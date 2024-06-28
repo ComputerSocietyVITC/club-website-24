@@ -1,18 +1,53 @@
-import image12 from "./images/events/ros/DSC_0133.JPG";
+import bci from "./images/projects/bci.gif"
+import bonetech from "./images/projects/bonetech.gif"
+import weather from "./images/projects/weather.gif"
+import livein from "./images/projects/livein.gif"
+import falling from "./images/projects/falling.gif"
+import dochub from "./images/projects/dochub.jpg"
+import opencv from "./images/projects/opencv.jpg"
+import reaction from "./images/projects/reaction.jpg"
 
 const slides = [
     {
-        title: "Project Name 1",
-        description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius lacinia dolor eget dapibus. Fusce interdum risus nunc, nec iaculis sapien tincidunt et. Nullam vel fringilla eros, id mollis ex. Praesent aliquam est sit amet lorem aliquam egestas. Sed consequat, quam a dapibus tempor, purus lorem aliquam leo, sed venenatis.",
-        img: image12,
+        title: "Brain Computer Interface",
+        description: "A brain-computer interface (BCI) is a technology that allows communication between a human or animal brain and an external technology. This term can refer to an interface that takes signals from the brain to an external piece of hardware, or a technology that sends signals to the brain. Various different brain-computer interface technologies have been developed at different times, through different methods and for diverse purposes, including in virtual reality technology.",
+        img: bci,
     },
     {
-        title: "Project Name 2",
-        description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius lacinia dolor eget dapibus. Fusce interdum risus nunc, nec iaculis sapien tincidunt et. Nullam vel fringilla eros, id mollis ex. Praesent aliquam est sit amet lorem aliquam egestas. Sed consequat, quam a dapibus tempor, purus lorem aliquam leo, sed venenatis.",
-        img: image12,
+        title: "Bone Conduction",
+        description: "Air conduction refers to sound from the outside carried by air waves from the outer ear and transferred to electrical waves in the inner ear. Bone conduction refers to sound conducted as subtle vibration along the bones to the inner ear housing the organs of hearing and balance. The sound vibration actually activates both the sense of hearing and the organ of balance. The vibration, in fact, is carried through the entire skeletal structure. We are working on a device which can facilitate this by using transducers.",
+        img: bonetech,
     },
+    {
+        title: "Weather Application",
+        description: "We are working on a weather front end application for our college. In any front end application, the main goal is to make the user experience feel natural and intuitive. Since our application will be displayed around campus televisions we came up with a touchless interface. We use machine learning for gesture controls to control the interface without using touch. The interface is deployed on arm devices locally which are synchronized through cloud.",
+        img: weather,
+    },
+    {
+        title: "Live in Arcade",
+        description: "With the roaring success of the Falling Blocks Game, IEEE Computer Society returned with an interactive controller based car racing game. Built on Unity 2D and using NodeMCU for the interaction between the sensor and the game,the players competed with each other, avoiding obstacles and trying to get the better of their opponent by using their skill on the wheel. The controllers were built to resemble real life steering wheels and the game was a huge success as an event.",
+        img: livein,
+    },
+    {
+        title: "Falling Blocks",
+        description: "We worked on an interactive controller-based game to be displayed in our college tech fest. In the game, the player had to balance the falling blocks on a plate which could be controlled by moving a physical box with a gyroscope and accelerometer sensor in it. The game itself was built on Unity 2D and NodeMCU was used for the interaction between the sensor and the game.",
+        img: falling,
+    },
+    {
+        title: "DocHub",
+        description: (<>The starting point for your tech journey. Get started and explore your favorite domain in tech. Whether you're just starting out or you're an experienced developer looking to take your skills to the next level, our documentation has something for everyone. Visit at <a href="https://docs.ieeecsvitc.com" className="inline-block" target="_blank" rel="noreferrer">docs.ieeecsvitc.com</a>.</>),
+        img: dochub,
+    },
+    {
+        title: "OpenCV Racing Interface",
+        description: "We developed an innovative project that leverages Python and the OpenCV library (cv2) to create a gesture-controlled gaming experience. By capturing hand positions and angles, our script allows players to control the popular racing games Asphalt 8 and Asphalt 9 with intuitive hand gestures. This project exemplifies our commitment to exploring cutting-edge technologies and enhancing interactive gaming experiences.",
+        img: opencv,
+    },
+    {
+        title: "Reaction Time Game",
+        description: "Originally designed by Abhijith and refined by Yuganshu and Sinchan, our Reaction Time Game challenges players to test their reflexes. Featuring four red lights that sequentially turn off, players must react swiftly and touch the screen when all lights are extinguished. The fastest reaction times determine the winner, making this game a thrilling test of speed and agility.",
+        img: reaction,
+    }
 ];
 
 export default slides;

@@ -44,7 +44,7 @@ const myTeam = [
   {
     name: "Teeshta Parmar",
     desig: "Social Media and Content Head",
-    imageUrl: "",
+    imageUrl: "https://media.licdn.com/dms/image/D4D03AQHbn_M8U-mkOA/profile-displayphoto-shrink_800_800/0/1718774973835?e=1724889600&v=beta&t=FXURKbokpWgo08hsn8NW2VZ0lwqrBEGduENJEL6m9vA",
     linkUrl: "",
     gitUrl: "",
   },

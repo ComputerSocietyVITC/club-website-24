@@ -5,8 +5,8 @@ import { useInView } from "react-intersection-observer";
 
 const Teamcard = ({ name, desig, imageUrl, linkUrl, gitUrl }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger animation only once
-    threshold: 0.3, // Trigger when 50% of the element is in view
+    triggerOnce: true,
+    threshold: 0.15,
   });
   return (
     <>
