@@ -20,7 +20,7 @@ const Teamcard2 = ({ name, desig, imageUrl, linkUrl, gitUrl }) => {
         <div className="rounded-[calc(18px-1px)] p-[30px] bg-gradient-to-b  from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[549px] ">
           <div className="flex flex-col justify-center items-center gap-y-9 h-[100%] img-hover card">
             <img
-              className="rounded-[50%] w-[220px] h-[220px] align-center mt-8 mb-4"
+              className="rounded-[50%] w-[220px] h-[220px] align-center mt-8 mb-4 object-cover"
               src={imageUrl}
               alt="none"
             />

@@ -1,4 +1,5 @@
 import image from "./images/shashwat.png"
+import image2 from "./images/Jasmine.jpg"
 
 const myTeam = [
   {
@@ -59,7 +60,7 @@ const myTeam = [
   {
     name: "Jasmine Tresa Jose",
     desig: "UI/UX Head",
-    imageUrl: "",
+    imageUrl: image2,
     linkUrl: "https://www.linkedin.com/in/jasmine-tresa-jose-488385252/",
     gitUrl: "",
   },

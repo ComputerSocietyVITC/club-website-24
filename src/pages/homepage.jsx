@@ -40,13 +40,13 @@ const Homepage = () => {
       <div>
         <div className="container mx-auto grid grid-cols-1 items-center justify-center min-h-screen ">
           <h1 className="lg:text-7xl text-4xl font-bold text-center text-[#7DFEF7]">
-            <AnimatedSection delay={1} className="my-4">
+            <AnimatedSection delay={0.5} className="my-4">
               We are the
             </AnimatedSection>
-            <AnimatedSection delay={2} className="my-4">
+            <AnimatedSection delay={1} className="my-4">
               IEEE Computer Society
             </AnimatedSection>
-            <AnimatedSection delay={3} className="my-4">
+            <AnimatedSection delay={1.5} className="my-4">
               VIT Chennai
             </AnimatedSection>
           </h1>
@@ -62,14 +62,14 @@ const Homepage = () => {
             <section className=" hidden lg:block">|</section>
             <section className="flex my-2">
               <section className="lg:hidden mx-1">|</section>
-              <AnimatedSection delay={1.5} className="lg:mx-4">
+              <AnimatedSection delay={1} className="lg:mx-4">
                 DEVELOP
               </AnimatedSection>
             </section>
             <section className=" hidden lg:block">|</section>
             <section className="flex my-2">
               <section className="lg:hidden mx-1">|</section>
-              <AnimatedSection delay={2.5} className="lg:mx-4">
+              <AnimatedSection delay={1.5} className="lg:mx-4">
                 DEPLOY
               </AnimatedSection>
             </section>

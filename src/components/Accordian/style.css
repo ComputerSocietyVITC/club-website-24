@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    
 }
 
 .image-accordion-item {
@@ -14,10 +15,11 @@
     border-radius: 20px;
     display: flex;
     text-align: center;
-    align-items: center; /* Center vertically */
+    align-items: center;
     background: linear-gradient(to bottom, #061b24, #072031, #061b24);
     opacity: 1;
     transition: width 2s, opacity 2s;
+    
 }
 
 
@@ -43,13 +45,13 @@
     transition: opacity 0.5s;
     display:none;
 }
-
 .image-accordion-item .out_content {
+    text-align: center;  
+    display: flex;  
+    align-items: center; 
     z-index: 1;
-    text-align: center;
-    transition: opacity 0.5s, padding 0.5s;
-    padding:0px 20px;
-    
+    justify-content: center;
+    transition: opacity 0.5s;
 }
 
 .image-accordion-item.active .content {

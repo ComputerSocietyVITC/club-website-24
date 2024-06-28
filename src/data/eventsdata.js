@@ -1,6 +1,6 @@
 import bitwars from "./images/events/covers/bitwars.jpg";
 import ros from "./images/events/covers/ros.jpg";
-import haktomania from "./images/events/covers/haktomania.jpg";
+import hacktomania from "./images/events/covers/hacktomania.jpg";
 import code from "./images/events/covers/code.webp";
 import appdev from "./images/events/covers/appdev.webp";
 import paradox3 from "./images/events/covers/paradox3.webp";
@@ -12,6 +12,7 @@ import datahub from "./images/events/covers/datahub.jpg";
 import datahub2 from "./images/events/covers/datahub2.webp";
 import cybertrunk from "./images/events/covers/cybertrunk.webp";
 import expound from "./images/events/covers/expound.jpg";
+import expo from "./images/events/covers/expo.jpg";
 
 export const eventData = {
   bitwars: {
@@ -29,10 +30,10 @@ export const eventData = {
     description: "Put your programming skills to test by participating in our coding contest in collaboration with Coding Ninjas. Win a Coding Ninjas merch with amazing Goodies",
     imageUrl: code,
   },
-  haktomania: {
-    title: "Haktomania",
+  hacktomania: {
+    title: "Hacktomania",
     description: "Get ready for Hacktomania, the ultimate open-source tech quiz event! Show off your tech prowess and compete to win prizes worth 13k and exciting goodies. We'll test your knowledge of Open Source, Git, GitHub, and more in this thrilling Halloween-themed challenge. Join us to embrace the spirit of Techtober!",
-    imageUrl: haktomania,
+    imageUrl: hacktomania,
   },
   paradox3: {
     title: "Paradox 2023",
@@ -84,11 +85,16 @@ export const eventData = {
     description: "Expound, an IOT & ML hackathon organised by IEEE CS in 2019 and sponsored by Einnel Technologies, attracted a large number of tech enthusiasts who competed for prizes of Rs. 25,000 over the course of a week.",
     imageUrl: expound,
   },
+  clubexpo: {
+    title: "Club Expo",
+    description: "Club Expo is an annual event where all the clubs of VIT showcase their work and achievements. IEEE Computer Society VIT Chennai actively participates in this event and showcases its projects and initiatives.",
+    imageUrl: expo,
+  },
 };
 
 // This is the order in which the events should be displayed
 export const eventOrder = [
-  "bitwars", "ros", "code", "haktomania", "paradox3", "appdev", "capturetheflag",
-  "paradox2", "hackhub", "datahub2", "cybertrunk", "paradox", "datahub", "expound"
+  "bitwars", "ros", "code", "hacktomania", "paradox3", "appdev", "capturetheflag",
+  "paradox2", "hackhub", "datahub2", "cybertrunk", "paradox", "datahub", "expound", "clubexpo"
 ];
   
