@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
-import { eventData } from "../data/eventsdata";
+import { eventData, eventOrder } from "../data/eventsdata";
 
 const importAll = (r) => {
   let images = {};
@@ -18,7 +18,7 @@ const importAll = (r) => {
 };
 
 const images = importAll(
-  require.context("../data/images/events", true, /main\.(jpg|JPG|png)$/)
+  require.context("../data/images/events", true, /main\.(jpg|JPG|png|webp)$/)
 );
 
 const Events = () => {
@@ -28,9 +28,9 @@ const Events = () => {
   const [currentEvent, setCurrentEvent] = useState("");
 
   useEffect(() => {
-    const eventSlides = Object.keys(images).map((key) => ({
+    const eventSlides = eventOrder.map((key) => ({
       src: images[key],
-      eventName: key.split("/")[0],
+      eventName: key,
     }));
 
     setSlides(eventSlides);
@@ -57,29 +57,28 @@ const Events = () => {
     }
   };
 
-  return  (
-    <div className="relative min-h-screen bg-transparent flex flex-col ml-4 items-center justify-center">
+  return (
+    <div className="relative min-h-screen bg-transparent flex flex-col items-center justify-center">
       {isMobile ? (
         <div>
-          <div className="text-white text-7xl font-bold text-center pb-24">Events</div>
+          <div className="text-white text-7xl font-bold text-center pt-32">Events</div>
             <div className="w-full max-w-6xl px-8">
               {slides.map((slide, index) => (
                 <div key={index} className="my-16">
-                  <div className="text-white text-4xl font-bold text-center">{slide.eventName.toUpperCase()}</div>
                   <div className="flex justify-center">
                     <img
-                      src={slide.src}
+                      src={eventData[slide.eventName]?.imageUrl || slide.src}
                       alt={slide.eventName}
-                      className="w-full max-w-72 h-[400px] rounded-xl object-full my-8"
+                      className="w-auto h-auto rounded-xl object-full my-8"
                       onClick={() => handleNavigateToGallery(slide.eventName)}
                     />
                   </div>
-                  <div className="rounded-[24px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-auto w-full md:w-auto md:h-auto shadow-2xl shadow-[#7ac4ec]/30 mt-4">
-                    <div className="rounded-[calc(24px-1px)] p-6 md:p-8 bg-gradient-to-b md:w-full from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-full flex flex-col justify-between text-center text-white max-w-[700px]">
-                      <h2 className="text-2xl md:text-3xl text-b_col3 font-semibold mb-2">
+                  <div className="rounded-[24px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 w-auto h-auto shadow-2xl shadow-[#7ac4ec]/30 mt-4">
+                    <div className="rounded-[calc(24px-1px)] p-8 bg-gradient-to-b w-full from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-full flex flex-col justify-between text-center text-white max-w-[700px]">
+                      <h2 className="text-[5vw] text-b_col3 font-semibold mb-2">
                         {eventData[slide.eventName]?.title}
                       </h2>
-                      <p className="text-sm md:text-base">
+                      <p className="text-[2.5vw]">
                         {eventData[slide.eventName]?.description}
                       </p>
                       <div className="pt-6">
@@ -100,8 +99,8 @@ const Events = () => {
         </div>
       ) : (
         <section className="min-h-screen text-white grid grid-cols-1 place-items-center">
-          <div className="w-full px-6 md:px-12">
-            <div className="text-5xl md:text-7xl font-bold text-center mt-16 mb-8">
+          <div className="w-full px-6">
+            <div className="text-7xl font-bold text-center mt-16 mb-8">
               Events
             </div>
             <Swiper
@@ -116,17 +115,17 @@ const Events = () => {
                 <SwiperSlide key={index}>
                   <div className="grid grid-cols-1 xl:grid-cols-2 mx-20 gap-4 items-center place-items-center py-8">
                     <img
-                      src={slide.src}
+                      src={eventData[slide.eventName]?.imageUrl || slide.src}
                       alt={slide.eventName}
-                      className="max-w-[550px] w-full max-h-[450px] object-cover md:{max-h-[346px] w-full max-w-[559px]} rounded-xl shadow-2xl shadow-[#7ac4ec]/30 sm:{max-h-[346px] max-w-[59px]}"
+                      className="w-auto max-h-[450px] object-cover rounded-xl shadow-2xl shadow-[#7ac4ec]/30"
                       onClick={() => handleNavigateToGallery(slide.eventName)}
                     />
-                    <div className="rounded-[36px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-auto lg:w-[500px] md:w-[400px] shadow-2xl shadow-[#7ac4ec]/30">
-                      <div className="rounded-[calc(36px-1px)] p-6 md:p-12 md:h-auto bg-gradient-to-b md:w-full from-[#061b24] via-[#072031] to-[#000b11] flex flex-col text-center text-white max-w-[559px]">
-                        <h2 className="text-[3vh] md:text-[4vh] lg:text-[5vh] xl:text-[6vh] text-b_col3 font-semibold mb-4">
+                    <div className="rounded-[36px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-auto lg:w-[500px] shadow-2xl shadow-[#7ac4ec]/30">
+                      <div className="rounded-[calc(36px-1px)] p-12 h-auto bg-gradient-to-b w-full from-[#061b24] via-[#072031] to-[#000b11] flex flex-col text-center text-white max-w-[559px]">
+                        <h2 className="text-[4vh] lg:text-[5vh] xl:text-[6vh] text-b_col3 font-semibold mb-4">
                           {eventData[slide.eventName]?.title}
                         </h2>
-                        <p className="text-[1.5vh] md:text-[1.6vh] lg:text-[1.75vh] xl:text-[2vh]">
+                        <p className="text-[1.6vh] lg:text-[1.75vh] xl:text-[2vh]">
                           {eventData[slide.eventName]?.description}
                         </p>
                         <div className="pt-8 flex justify-center">
