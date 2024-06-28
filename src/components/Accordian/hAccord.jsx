@@ -5,19 +5,16 @@ const HAccord = ({ items }) => {
   const [accord, setActiveAccord] = useState(-1);
 
   const toggleAccordion = (index) => {
-    if (accord === index) {
-      setActiveAccord(-1);
-    } else {
-      setActiveAccord(index);
-    }
+    setActiveAccord(index === accord ? -1 : index);
   };
 
   return (
-    <div className="text-white h_accord_main flex flex-col items-center">
+    <div className="text-white h_accord_main flex flex-col items-center min-w-[75vw]">
       {items.map((item, index) => {
         return (
-          <div key={index} onClick={() => toggleAccordion(index)}>
-            <div className="flex justify-between max-[640px]:justify-between p-6 max-[640px]:p-3">
+          <div key={index}>
+            <div className="flex justify-between max-[640px]:justify-between p-6 max-[640px]:p-3"
+            onClick={() => toggleAccordion(index)}>
               <div className="h_accord_heading">
                 <h3 className={accord === index ? "active" : ""}>
                   {item.header}
