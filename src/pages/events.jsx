@@ -4,9 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
-import { eventData } from "../data/eventsdata"; // Adjust the path as needed
+import { eventData } from "../data/eventsdata";
 
 const importAll = (r) => {
   let images = {};
@@ -58,7 +58,7 @@ const Events = () => {
   };
 
   return  (
-    <div className="relative min-h-screen bg-transparent flex flex-col ml-4 items-center justify-center py-36">
+    <div className="relative min-h-screen bg-transparent flex flex-col ml-4 items-center justify-center">
       {isMobile ? (
         <div>
           <div className="text-white text-7xl font-bold text-center pb-24">Events</div>
@@ -66,7 +66,7 @@ const Events = () => {
               {slides.map((slide, index) => (
                 <div key={index} className="my-16">
                   <div className="text-white text-4xl font-bold text-center">{slide.eventName.toUpperCase()}</div>
-                  <div className="flex justify-center"> {/* Center the image */}
+                  <div className="flex justify-center">
                     <img
                       src={slide.src}
                       alt={slide.eventName}
@@ -99,63 +99,53 @@ const Events = () => {
           </div>
         </div>
       ) : (
-        <>
-          <div className="text-white text-7xl font-bold mb-8 text-center">{currentEvent.toUpperCase()}</div>
-          <Swiper
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={3}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-            }}
-            pagination={{ clickable: true }}
-            modules={[Autoplay, EffectCoverflow, Pagination]}
-            className="w-full max-w-5xl "
-            onSlideChange={handleSlideChange}
-            autoplay={{
-              delay: 2000,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-              speed: 2000,
-              loop: true,
-            }}
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={slide.src}
-                  alt={slide.eventName}
-                  className="w-full mb-48 h-[400px] rounded-xl object-fill"
-                />
-                {slide.eventName === currentEvent && (
-                  <div className="absolute bottom-0 -left-48 -right-48 rounded-[24px] p-0.5 opacity-75 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-[200px] w-full md:w-auto md:h-auto shadow-2xl shadow-[#7ac4ec]/30">
-                    <div className="rounded-[calc(24px-1px)] p-6 md:p-8 bg-gradient-to-b md:w-full from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-full flex flex-col justify-between text-center text-white max-w-[800px]">
-                      <p className="text-sm md:text-base">
-                        {eventData[slide.eventName]?.description}
-                      </p>
-                      <div className="pt-4 flex justify-center">
-                        <button
-                          className="border-2 border-solid border-teal-500 p-4 rounded-full bg-gradient-to-r from-b_col1 to-b_col2"
-                          onClick={() => handleNavigateToGallery()}
-                        >
-                          <span className="text-teal-500 font-light text-lg">
-                            View Gallery &gt;
-                          </span>
-                        </button>
+        <section className="min-h-screen text-white grid grid-cols-1 place-items-center">
+          <div className="w-full px-6 md:px-12">
+            <div className="text-5xl md:text-7xl font-bold text-center mt-32 mb-8">
+              Events
+            </div>
+            <Swiper
+              modules={[Navigation]}
+              navigation
+              spaceBetween={50}
+              slidesPerView={1}
+              onSlideChange={handleSlideChange}
+            >
+              {slides.map((slide, index) => (
+                <SwiperSlide key={index}>
+                  <div className="grid grid-cols-1 xl:grid-cols-2 mx-20 gap-4 items-center place-items-center py-8">
+                    <img
+                      src={slide.src}
+                      alt={slide.eventName}
+                      className="max-w-[550px] w-full max-h-[450px] object-cover md:{max-h-[346px] w-full max-w-[559px]} rounded-xl shadow-2xl shadow-[#7ac4ec]/30 sm:{max-h-[346px] max-w-[59px]}"
+                      onClick={() => handleNavigateToGallery(slide.eventName)}
+                    />
+                    <div className="rounded-[36px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-auto lg:w-[500px] md:w-[400px] shadow-2xl shadow-[#7ac4ec]/30">
+                      <div className="rounded-[calc(36px-1px)] p-6 md:p-12 md:h-auto bg-gradient-to-b md:w-full from-[#061b24] via-[#072031] to-[#000b11] flex flex-col text-center text-white max-w-[559px]">
+                        <h2 className="text-[3vh] md:text-[4vh] lg:text-[5vh] xl:text-[6vh] text-b_col3 font-semibold mb-4">
+                          {eventData[slide.eventName]?.title}
+                        </h2>
+                        <p className="text-[1.5vh] md:text-[1.6vh] lg:text-[1.75vh] xl:text-[2vh]">
+                          {eventData[slide.eventName]?.description}
+                        </p>
+                        <div className="pt-8 flex justify-center">
+                          <button
+                            className="border-2 border-solid border-teal-500 p-4 rounded-full bg-gradient-to-r from-b_col1 to-b_col2"
+                            onClick={() => handleNavigateToGallery(slide.eventName)}
+                          >
+                            <span className="text-teal-500 font-light text-lg">
+                              View Gallery &gt;
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                )}
-              </SwiperSlide>
-            ))}
-            <div className="swiper-pagination"></div>
-          </Swiper>
-        </>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </section>
       )}
     </div>
   );
