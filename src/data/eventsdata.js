@@ -1,18 +1,18 @@
-import bitwars from "./images/events/covers/bitwars.jpg";
-import ros from "./images/events/covers/ros.jpg";
-import hacktomania from "./images/events/covers/hacktomania.jpg";
+import bitwars from "./images/events/covers/bitwars.webp";
+import ros from "./images/events/covers/ros.webp";
+import hacktomania from "./images/events/covers/hacktomania.webp";
 import code from "./images/events/covers/code.webp";
 import appdev from "./images/events/covers/appdev.webp";
 import paradox3 from "./images/events/covers/paradox3.webp";
 import paradox2 from "./images/events/covers/paradox2.webp";
-import paradox from "./images/events/covers/paradox.jpg";
+import paradox from "./images/events/covers/paradox.webp";
 import capturetheflag from "./images/events/covers/capturetheflag.webp";
-import hackhub from "./images/events/covers/hackhub.jpg";
-import datahub from "./images/events/covers/datahub.jpg";
+import hackhub from "./images/events/covers/hackhub.webp";
+import datahub from "./images/events/covers/datahub.webp";
 import datahub2 from "./images/events/covers/datahub2.webp";
 import cybertrunk from "./images/events/covers/cybertrunk.webp";
-import expound from "./images/events/covers/expound.jpg";
-import expo from "./images/events/covers/expo.jpg";
+import expound from "./images/events/covers/expound.webp";
+import expo from "./images/events/covers/expo.webp";
 
 export const eventData = {
   bitwars: {
@@ -97,4 +97,3 @@ export const eventOrder = [
   "bitwars", "ros", "code", "hacktomania", "paradox3", "appdev", "capturetheflag",
   "paradox2", "hackhub", "datahub2", "cybertrunk", "paradox", "datahub", "expound", "clubexpo"
 ];
-  
