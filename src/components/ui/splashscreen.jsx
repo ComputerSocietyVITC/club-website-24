@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import icon from "../../assets/comsocLogowhite.png"; // Import your icon image
+import icon from "../../assets/comsocLogowhite.webp";
 import { useState } from "react";
 
 const SplashScreen = () => {
