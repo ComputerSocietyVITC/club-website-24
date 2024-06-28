@@ -52,8 +52,8 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-transparent events-container flex flex-col items-center">
-      <div className="pt-16 text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-24">
-      {currentEvent.toUpperCase()} Gallery
+      <div className="pt-[4vh] text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-24">
+      {currentEvent.toUpperCase()} 
       </div>
 
       <div className="block md:hidden w-full">
@@ -99,15 +99,17 @@ const Gallery = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white p-4 flex flex-col items-center rounded-lg shadow-lg w-full">
+              <div className="flex items-center h-full ">
+              <div className="bg-white p-4 flex flex-col justify-center items-center rounded-lg shadow-lg w-full">
                 <div className="w-full aspect-1 flex items-center justify-center">
                   <img
                     src={slide.src}
                     alt={slide.eventName}
-                    className="max-h-96 object-contain"
+                    className="max-h-[80vh] object-contain"
                   />
                 </div>
-                <div className="text-center py-4 text-black">Description</div>
+                <div className="text-center py-4 text-black"> </div>
+              </div>
               </div>
             </SwiperSlide>
           ))}
