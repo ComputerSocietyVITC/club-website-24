@@ -13,7 +13,9 @@ import datahub2 from "./images/events/covers/datahub2.webp";
 import cybertrunk from "./images/events/covers/cybertrunk.webp";
 import expound from "./images/events/covers/expound.webp";
 import expo from "./images/events/covers/expo.webp";
+import carnival from "./images/events/covers/carnival.webp";
 
+// The description here can use HTML tags for formatting, follow the React return statement syntax to achieve that
 export const eventData = {
   bitwars: {
     title: "BitWars",
@@ -90,10 +92,15 @@ export const eventData = {
     description: "Club Expo is an annual event where all the clubs of VIT showcase their work and achievements. IEEE Computer Society VIT Chennai actively participates in this event and showcases its projects and initiatives.",
     imageUrl: expo,
   },
+  carnival: {
+    title: "Tech Carnival",
+    description: "The Tech Carnival, hosted by our club, showcased innovative interactive game projects. Highlights included gesture-controlled versions of Asphalt 8, Asphalt 9, and Pacman. A 2-player Pong game and an original game, Hydro Rush, both developed by club members, were featured. The event celebrated our technical skills and provided an engaging experience for all attendees.",
+    imageUrl: carnival,
+  }
 };
 
 // This is the order in which the events should be displayed; also the folder names for the images of these events should be the same as the keys in this object
 export const eventOrder = [
-  "bitwars", "ros", "code", "hacktomania", "paradox3", "appdev", "capturetheflag",
+  "bitwars", "ros", "carnival", "code", "hacktomania", "paradox3", "appdev", "capturetheflag",
   "paradox2", "hackhub", "datahub2", "cybertrunk", "paradox", "datahub", "expound", "clubexpo"
 ];

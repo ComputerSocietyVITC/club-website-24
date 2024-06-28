@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../ICON.webp";
+import logo from "../data/images/misc/ICON.webp";
 import { NavLink } from "react-router-dom";
 import { routes } from "../data/routes";
 import { motion } from "framer-motion";

@@ -8,6 +8,7 @@ import opencv from "./images/projects/opencv.webp"
 import reaction from "./images/projects/reaction.webp"
 import hydro from "./images/projects/hydron.gif"
 
+// The description here can use HTML tags for formatting, follow the React return statement syntax to achieve that
 const slides = [
     {
         title: "Hydro-Rush",

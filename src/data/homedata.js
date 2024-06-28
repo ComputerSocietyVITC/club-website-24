@@ -1,5 +1,6 @@
 import socialMediaLinks from "./socialMediaLinks";
 
+// The content here can use HTML tags for formatting, follow the React return statement syntax to achieve that
 const items = [
   {
     header: "ABOUT US",
@@ -54,24 +55,24 @@ const items = [
             Social Media
           </div>
           <div className="grid grid-cols-4 place-items-center">
-          {socialMediaLinks.map((link, index) => (
-            <div
-              key={index}
-              className="hover:scale-150 transition duration-200"
-            >
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noreferrer"
+            {socialMediaLinks.map((link, index) => (
+              <div
+                key={index}
+                className="hover:scale-150 transition duration-200"
               >
-                <img
-                  src={link.icon}
-                  alt={link.platform}
-                  className="h-7 my-5 "
-                />
-              </a>
-            </div>
-          ))}
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={link.icon}
+                    alt={link.platform}
+                    className="h-7 my-5 "
+                  />
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
