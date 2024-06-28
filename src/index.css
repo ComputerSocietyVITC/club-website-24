@@ -75,8 +75,17 @@ div {
   left: 0;
 }
 
-.link-activee {
-  color: white;
+.active-link {
+  @apply text-white;
+}
+
+.active-link::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #10b981;
+  width: 100%;
+  position: absolute;
+  bottom: -2px;
 }
 
 .events-container {

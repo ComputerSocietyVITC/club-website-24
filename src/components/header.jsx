@@ -52,7 +52,7 @@ const Header = () => {
           <img src={logo} alt="IEEE Logo" className="h-12 w-12" />
         </NavLink>
 
-        <nav className="lg:hidden">
+        <nav className="xl:hidden">
           <button
             onClick={handleClick}
             className="flex flex-col justify-center items-center py-1"
@@ -87,8 +87,11 @@ const Header = () => {
               <li key={index}>
                 <NavLink
                   to={route.href}
-                  className="custom-underline hover:text-white mx-6"
-                  activeClassName="link-activee"
+                  className={({ isActive }) =>
+                    isActive
+                      ? 'custom-underline hover:text-white mx-6 active-link'
+                      : 'custom-underline hover:text-white mx-6'
+                  }
                 >
                   {route.title}
                 </NavLink>
