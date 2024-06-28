@@ -6,8 +6,20 @@ import falling from "./images/projects/falling.gif"
 import dochub from "./images/projects/dochub.jpg"
 import opencv from "./images/projects/opencv.jpg"
 import reaction from "./images/projects/reaction.jpg"
+import hydro from "./images/projects/hydron.gif"
 
 const slides = [
+    {
+        title: "Hydro-Rush",
+        description: (
+            <div>
+                <div>Created for the IEEE ComSoc Arcade Expo Event 2024 at VIT Chennai, India, Hydro-Rush is an action-packed shooter game developed by Shlok. This exciting project was also showcased at our club's tech carnival event.</div>
+                <div>In Hydro-Rush, players control a character navigating through challenging levels, dodging obstacles, and managing their health, ammo, and score. The game features indicators for health, ammo, and score to enhance the gaming experience.</div>
+                <div>Hydro-Rush exemplifies our commitment to fostering creativity and technical skills among our members. We are proud to present this project as part of our club's achievements.</div>
+            </div>
+        ),
+        img: hydro,
+    },
     {
         title: "Brain Computer Interface",
         description: "A brain-computer interface (BCI) is a technology that allows communication between a human or animal brain and an external technology. This term can refer to an interface that takes signals from the brain to an external piece of hardware, or a technology that sends signals to the brain. Various different brain-computer interface technologies have been developed at different times, through different methods and for diverse purposes, including in virtual reality technology.",
