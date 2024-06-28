@@ -1,5 +1,5 @@
-import github from "../../assets/socialmedia/github.png";
-import linkedin from "../../assets/socialmedia/linkedin.png";
+import github from "../../assets/socialmedia/github.webp";
+import linkedin from "../../assets/socialmedia/linkedin.webp";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 

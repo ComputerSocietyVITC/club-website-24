@@ -1,11 +1,11 @@
-import instagram from "../assets/socialmedia/instagram.png";
-import github from "../assets/socialmedia/github.png";
-import linkedin from "../assets/socialmedia/linkedin.png";
-import discord from "../assets/socialmedia/discord.png";
-import youtube from "../assets/socialmedia/youtube.png";
-import twitter from "../assets/socialmedia/twitter.png";
-import telegram from "../assets/socialmedia/telegram.png";
-import devto from "../assets/socialmedia/devto.png";
+import instagram from "../assets/socialmedia/instagram.webp";
+import github from "../assets/socialmedia/github.webp";
+import linkedin from "../assets/socialmedia/linkedin.webp";
+import discord from "../assets/socialmedia/discord.webp";
+import youtube from "../assets/socialmedia/youtube.webp";
+import twitter from "../assets/socialmedia/twitter.webp";
+import telegram from "../assets/socialmedia/telegram.webp";
+import devto from "../assets/socialmedia/devto.webp";
 
 const socialMediaLinks = [
   {
