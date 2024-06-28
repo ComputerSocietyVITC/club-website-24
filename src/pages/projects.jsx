@@ -23,7 +23,7 @@ const Project = () => {
     <div className="relative min-h-screen bg-transparent flex flex-col items-center justify-center">
       {isMobile ? (
         <div>
-          <div className="text-white text-7xl font-bold text-center pt-32 pb-8">Projects</div>
+          <div className="text-white text-7xl font-bold text-center pt-32">Projects</div>
           <div className="w-full max-w-6xl px-8">
             {slides.map((slide, index) => (
               <div key={index} className="my-16">
