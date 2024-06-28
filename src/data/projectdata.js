@@ -3,9 +3,9 @@ import bonetech from "./images/projects/bonetech.gif"
 import weather from "./images/projects/weather.gif"
 import livein from "./images/projects/livein.gif"
 import falling from "./images/projects/falling.gif"
-import dochub from "./images/projects/dochub.jpg"
-import opencv from "./images/projects/opencv.jpg"
-import reaction from "./images/projects/reaction.jpg"
+import dochub from "./images/projects/dochub.webp"
+import opencv from "./images/projects/opencv.webp"
+import reaction from "./images/projects/reaction.webp"
 import hydro from "./images/projects/hydron.gif"
 
 const slides = [
