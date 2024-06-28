@@ -16,7 +16,7 @@ const myTeam = [
     imageUrl:
       "https://media.licdn.com/dms/image/D5603AQE4o90wdmTv7Q/profile-displayphoto-shrink_800_800/0/1692941127887?e=1724284800&v=beta&t=AnqpIKc322AO9Wbj95cFu-7rtK78U-2Yk0pIfH5CxP0",
     linkUrl: "https://www.linkedin.com/in/mohammad-faiz-abid-875371194/",
-    gitUrl: "",
+    gitUrl: "https://github.com/atfaizzz",
   },
   {
     name: "Anvesha Singh",
@@ -40,7 +40,7 @@ const myTeam = [
     imageUrl:
       "https://media.licdn.com/dms/image/D4E03AQEsnRZvlmFENQ/profile-displayphoto-shrink_800_800/0/1698810602543?e=1724284800&v=beta&t=1Dvx4wvFVQQaL8TvLEU5MuHCs_cE4Lo-0Slzfj3dQFY",
     linkUrl: "https://www.linkedin.com/in/anirudh-sridhar-07bb02298/",
-    gitUrl: "",
+    gitUrl: "http://github.com/shotoyaar",
   },
   {
     name: "Teeshta Parmar",
