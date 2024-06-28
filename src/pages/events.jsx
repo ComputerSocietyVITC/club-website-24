@@ -135,9 +135,19 @@ const Events = () => {
                 {slide.eventName === currentEvent && (
                   <div className="absolute bottom-0 -left-48 -right-48 rounded-[24px] p-0.5 opacity-75 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-[200px] w-full md:w-auto md:h-auto shadow-2xl shadow-[#7ac4ec]/30">
                     <div className="rounded-[calc(24px-1px)] p-6 md:p-8 bg-gradient-to-b md:w-full from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-full flex flex-col justify-between text-center text-white max-w-[800px]">
-                      <p className="text-sm md:text-base py-8">
+                      <p className="text-sm md:text-base">
                         {eventData[slide.eventName]?.description}
                       </p>
+                      <div className="pt-4 flex justify-center">
+                        <button
+                          className="border-2 border-solid border-teal-500 p-4 rounded-full bg-gradient-to-r from-b_col1 to-b_col2"
+                          onClick={() => handleNavigateToGallery()}
+                        >
+                          <span className="text-teal-500 font-light text-lg">
+                            View Gallery &gt;
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -146,16 +156,6 @@ const Events = () => {
             <div className="swiper-pagination"></div>
           </Swiper>
         </>
-      )}
-      {!isMobile && (
-        <button
-          className="absolute bottom-8 right-8 border-2 border-solid border-teal-500 p-4 rounded-full bg-gradient-to-r from-b_col1 to-b_col2"
-          onClick={() => handleNavigateToGallery()}
-        >
-          <span className="text-teal-500 font-light text-lg">
-            View Gallery &gt;
-          </span>
-        </button>
       )}
     </div>
   );
