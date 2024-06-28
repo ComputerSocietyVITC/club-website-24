@@ -47,7 +47,7 @@ const Homepage = () => {
               IEEE Computer Society
             </AnimatedSection>
             <AnimatedSection delay={3} className="my-4">
-              VIT Chennai...
+              VIT Chennai
             </AnimatedSection>
           </h1>
         </div>
