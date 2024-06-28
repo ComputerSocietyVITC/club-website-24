@@ -22,7 +22,7 @@ const Gallery = () => {
   const images = useMemo(() => {
     try {
       return importAll(
-        require.context(`../data/images/events`, true, /\.(jpg|png|JPG)$/)
+        require.context(`../data/images/events`, true, /\.(jpg|png|JPG|webp)$/)
       );
     } catch (error) {
       console.error(`Error loading images for event: ${event}`, error);
@@ -53,7 +53,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-transparent events-container flex flex-col items-center">
       <div className="pt-[4vh] text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-24">
-      {currentEvent.toUpperCase()} 
+        {currentEvent.toUpperCase()}
       </div>
 
       <div className="block md:hidden w-full">
@@ -100,16 +100,16 @@ const Gallery = () => {
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <div className="flex items-center h-full ">
-              <div className="bg-white p-4 flex flex-col justify-center items-center rounded-lg shadow-lg w-full">
-                <div className="w-full aspect-1 flex items-center justify-center">
-                  <img
-                    src={slide.src}
-                    alt={slide.eventName}
-                    className="max-h-[80vh] object-contain"
-                  />
+                <div className="bg-white p-4 flex flex-col justify-center items-center rounded-lg shadow-lg w-full">
+                  <div className="w-full aspect-1 flex items-center justify-center">
+                    <img
+                      src={slide.src}
+                      alt={slide.eventName}
+                      className="max-h-[80vh] object-contain"
+                    />
+                  </div>
+                  <div className="text-center py-4 text-black"> </div>
                 </div>
-                <div className="text-center py-4 text-black"> </div>
-              </div>
               </div>
             </SwiperSlide>
           ))}

@@ -8,13 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "android-chrome-192x192.png",
-      "type": "image/png",
+      "src": "android-chrome-192x192.webp",
+      "type": "image/webp",
       "sizes": "192x192"
     },
     {
-      "src": "android-chrome-512x512.png",
-      "type": "image/png",
+      "src": "android-chrome-512x512.webp",
+      "type": "image/webp",
       "sizes": "512x512"
     }
   ],

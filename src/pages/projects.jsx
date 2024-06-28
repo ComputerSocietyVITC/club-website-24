@@ -51,7 +51,7 @@ const Project = () => {
       ) : (
         <section className="min-h-screen text-white grid grid-cols-1 place-items-center">
           <div className="w-full px-12">
-            <div className="text-5xl md:text-7xl font-bold text-center mt-32 mb-8">
+            <div className="text-5xl md:text-7xl font-bold text-center mt-16 mb-8">
               Projects
             </div>
             <Swiper
@@ -60,6 +60,7 @@ const Project = () => {
               spaceBetween={50}
               slidesPerView={1}
               speed={600}
+              loop={true}
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>

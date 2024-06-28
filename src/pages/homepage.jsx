@@ -92,18 +92,18 @@ const Homepage = () => {
             <div className="rounded-[36px] p-0.5 bg-gradient-to-b from-b_col3 to-b_col4 h-[555px] w-[430px] shadow-2xl shadow-[#7ac4ec]/30">
               <div className="rounded-[calc(36px-1px)]  bg-gradient-to-b  from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-[549px] relative">
                 <div className="absolute -right-[100px] -bottom-14 z-15"></div>
-                  <div className="flex flex-col rounded-[calc(36px-2px)] justify-center text-center z-20 w-full h-full items-center">
-                    <h2 className="text-4xl mb-12 font-semibold text-center items-center text-[#7DFEF7]">
-                      {activeItem.header}
-                    </h2>
-                    <p
-                      className="text-md px-12 items-center text-[#7DFEF7]"
-                    >
-                      {activeItem.content}
-                    </p>
-                  </div>
+                <div className="flex flex-col rounded-[calc(36px-2px)] justify-center text-center z-20 w-full h-full items-center">
+                  <h2 className="text-4xl mb-12 font-semibold text-center items-center text-[#7DFEF7]">
+                    {activeItem.header}
+                  </h2>
+                  <p
+                    className="text-md px-12 items-center text-[#7DFEF7]"
+                  >
+                    {activeItem.content}
+                  </p>
                 </div>
               </div>
+            </div>
           </div>
         </div>
         <div className="mt-0 pb-16 mx-32 opacity-100 lg:hidden flex items-center justify-center min-h-screen">

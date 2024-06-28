@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "./style_h.css";
 
-const HAccord = ({items}) => {
+const HAccord = ({ items }) => {
   const [accord, setActiveAccord] = useState(-1);
 
   const toggleAccordion = (index) => {
-    setActiveAccord(index);
+    if (accord === index) {
+      setActiveAccord(-1);
+    } else {
+      setActiveAccord(index);
+    }
   };
 
   return (

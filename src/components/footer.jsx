@@ -1,5 +1,5 @@
 import React from "react";
-import comsocLogowhite from "../assets/comsocLogowhite.png";
+import comsocLogowhite from "../assets/comsocLogowhite.webp";
 import { Link } from "react-router-dom";
 import { routes } from "../data/routes";
 import socialMediaLinks from "../data/socialMediaLinks";
