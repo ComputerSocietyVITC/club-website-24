@@ -109,6 +109,7 @@ const Events = () => {
               navigation
               spaceBetween={50}
               slidesPerView={1}
+              speed={600}
               onSlideChange={handleSlideChange}
             >
               {slides.map((slide, index) => (

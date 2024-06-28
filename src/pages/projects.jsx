@@ -60,6 +60,7 @@ const Project = () => {
               navigation
               spaceBetween={50}
               slidesPerView={1}
+              speed={600}
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
