@@ -53,7 +53,7 @@ const Gallery = () => {
   return (
     <div className="min-h-screen bg-transparent events-container flex flex-col items-center">
       <div className="pt-16 text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center pb-24">
-      {currentEvent.toUpperCase()} Gallery
+      {currentEvent.toUpperCase()} 
       </div>
 
       <div className="block md:hidden w-full">
@@ -107,7 +107,7 @@ const Gallery = () => {
                     className="max-h-96 object-contain"
                   />
                 </div>
-                <div className="text-center py-4 text-black">Description</div>
+                <div className="text-center py-4 text-black"> </div>
               </div>
             </SwiperSlide>
           ))}
