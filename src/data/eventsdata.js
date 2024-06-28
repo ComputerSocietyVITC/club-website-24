@@ -92,7 +92,7 @@ export const eventData = {
   },
 };
 
-// This is the order in which the events should be displayed
+// This is the order in which the events should be displayed; also the folder names for the images of these events should be the same as the keys in this object
 export const eventOrder = [
   "bitwars", "ros", "code", "hacktomania", "paradox3", "appdev", "capturetheflag",
   "paradox2", "hackhub", "datahub2", "cybertrunk", "paradox", "datahub", "expound", "clubexpo"
