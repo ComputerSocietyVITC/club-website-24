@@ -101,7 +101,7 @@ const Events = () => {
       ) : (
         <section className="min-h-screen text-white grid grid-cols-1 place-items-center">
           <div className="w-full px-6 md:px-12">
-            <div className="text-5xl md:text-7xl font-bold text-center mt-32 mb-8">
+            <div className="text-5xl md:text-7xl font-bold text-center mt-16 mb-8">
               Events
             </div>
             <Swiper

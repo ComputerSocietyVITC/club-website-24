@@ -7,7 +7,7 @@ const Blogs = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center scale-80 py-48 bg-transparent">
+      <div className="min-h-screen flex flex-col items-center scale-80 pt-32 pb-16 bg-transparent">
         <div className="text-white text-7xl font-bold text-center pb-16">
           Blogs
         </div>
