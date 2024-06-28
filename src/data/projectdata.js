@@ -35,7 +35,7 @@ const slides = [
     },
     {
         title: "DocHub",
-        description: "The starting point for your tech journey. Get started and explore your favorite domain in tech. Whether you're just starting out or you're an experienced developer looking to take your skills to the next level, our documentation has something for everyone. Visit at docs.ieeecsvitc.com",
+        description: (<>The starting point for your tech journey. Get started and explore your favorite domain in tech. Whether you're just starting out or you're an experienced developer looking to take your skills to the next level, our documentation has something for everyone. Visit at <a href="https://docs.ieeecsvitc.com" className="inline-block" target="_blank" rel="noreferrer">docs.ieeecsvitc.com</a>.</>),
         img: dochub,
     },
     {
