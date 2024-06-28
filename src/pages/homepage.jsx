@@ -41,7 +41,7 @@ const Homepage = () => {
         <div className="container mx-auto grid grid-cols-1 items-center justify-center min-h-screen ">
           <h1 className="lg:text-7xl text-4xl font-bold text-center text-[#7DFEF7]">
             <AnimatedSection delay={1} className="my-4">
-              We are The
+              We are the
             </AnimatedSection>
             <AnimatedSection delay={2} className="my-4">
               IEEE Computer Society
