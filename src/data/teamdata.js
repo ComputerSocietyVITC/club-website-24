@@ -24,7 +24,7 @@ const myTeam = [
     imageUrl:
       "https://media.licdn.com/dms/image/D5603AQHFwoa3ehyK5Q/profile-displayphoto-shrink_800_800/0/1692123083098?e=1724284800&v=beta&t=PkVbQmZYLJ7WAPiDHH3yfAAvXzg880JsrJWUNOpwWhE",
     linkUrl: "https://www.linkedin.com/in/anvesha-singh-330ba9260/",
-    gitUrl: "",
+    gitUrl: "https://github.com/Anvesha-Singh",
   },
   {
     name: "Sandeep Ravisankar",
