@@ -1,5 +1,5 @@
-import image from "./images/shashwat.png"
-import image2 from "./images/Jasmine.jpg"
+import image from "./images/team/shashwat.webp"
+import image2 from "./images/team/jasmine.webp"
 
 const myTeam = [
   {
