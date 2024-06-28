@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import slides from "../data/projectdata";
 
 const Project = () => {
@@ -12,9 +12,8 @@ const Project = () => {
           Projects
         </div>
         <Swiper
-          modules={[Navigation, Pagination]}
+          modules={[Navigation]}
           navigation
-          pagination={{ clickable: true }}
           spaceBetween={50}
           slidesPerView={1}
         >
