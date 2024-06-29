@@ -1,10 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 import Splashscreen from "../components/splashscreen/Splashscreen";
+import Blog from "./blog.astro";
+import Homescreen from "./homescreen.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout>
     <main>
         <Splashscreen client:load />
+        <Header />
+        <Homescreen />
+        <Blog />
+
+        <Footer />
     </main>
 </Layout>
