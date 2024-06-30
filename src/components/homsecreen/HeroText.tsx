@@ -30,7 +30,7 @@ const AnimatedSection = ({
 
 const HeroText = () => {
     return (
-        <section className="flex flex-col justify-center items-center gap-10 text-[8vh] mb-[25vh]">
+        <section className="flex flex-col justify-center items-center gap-10 text-[6vh] mb-[25vh]">
             <AnimatedSection delay={0.5} className="">
                 We are
             </AnimatedSection>
@@ -40,7 +40,7 @@ const HeroText = () => {
             <AnimatedSection delay={1.5} className="">
                 VIT Chennai
             </AnimatedSection>
-            <section className="text-white font-light text-4xl grid text-[4vh] lg:grid-cols-5 sm:grid-rows-3 md:grid-rows-3 text-left lg:text-center sm:place-items-start place-items-center px-6 content-center pt-[10vh]">
+            <section className="text-white font-light grid text-[3text sizevh] lg:grid-cols-5 sm:grid-rows-3 md:grid-rows-3 text-left lg:text-center sm:place-items-start place-items-center px-6 content-center pt-[10vh]">
                 <section className="flex h-full w-full ">
                     <section className="lg:hidden">|</section>
                     <AnimatedSection delay={0.5} className="">
