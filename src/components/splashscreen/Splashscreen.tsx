@@ -17,7 +17,7 @@ const Splashscreen = () => {
                     onAnimationComplete={onAnimationComplete}
                 >
                     <motion.img
-                        src="/assets/comsocLogowhite.webp"
+                        src="/comsocLogowhite.webp"
                         alt="Icon"
                         className="self-center scale-50"
                     />
