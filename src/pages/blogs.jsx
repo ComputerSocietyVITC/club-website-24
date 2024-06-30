@@ -1,12 +1,14 @@
 import BlogCard from "../components/BlogCard";
 import Footer from "../components/footer";
 import { getSortedBlogDataInDescendingOrder } from "../data/blogdata";
+import RetroGrid from "../components/magicui/retro-grid-blog";
 
 const Blogs = () => {
   const sortedBlogData = getSortedBlogDataInDescendingOrder();
 
   return (
     <>
+      <RetroGrid />
       <div className="min-h-screen flex flex-col items-center scale-80 pt-32 pb-16 bg-transparent">
         <div className="text-white text-7xl font-bold text-center pb-16">
           Blogs

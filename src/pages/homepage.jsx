@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import ImageAccordian from "../components/Accordian/imageAccordian";
 import Footer from "../components/footer";
@@ -8,6 +10,7 @@ import HAccord from "../components/Accordian/hAccord";
 import { routes } from "../data/routes";
 import HomepageRouterCircles from "../components/homepageroutercircles";
 import items from "../data/homedata";
+import RetroGrid from "../components/magicui/retro-grid";
 
 const AnimatedSection = ({ children, delay, className }) => {
   const { ref, inView } = useInView({
@@ -29,7 +32,9 @@ const AnimatedSection = ({ children, delay, className }) => {
 };
 
 const Homepage = () => {
-  const [activeItem, setActiveItem] = useState(items && items.length > 0 ? items[0] : null);
+  const [activeItem, setActiveItem] = useState(
+    items && items.length > 0 ? items[0] : null
+  );
   const ref = useRef(null);
   const handleClick = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -37,6 +42,7 @@ const Homepage = () => {
 
   return (
     <>
+      <RetroGrid />
       <div>
         <div className="container mx-auto grid grid-cols-1 items-center justify-center min-h-screen ">
           <h1 className="lg:text-7xl text-4xl font-bold text-center text-[#7DFEF7]">
@@ -96,9 +102,7 @@ const Homepage = () => {
                   <h2 className="text-4xl mb-12 font-semibold text-center items-center text-[#7DFEF7]">
                     {activeItem.header}
                   </h2>
-                  <p
-                    className="text-md px-12 items-center text-[#7DFEF7]"
-                  >
+                  <p className="text-md px-12 items-center text-[#7DFEF7]">
                     {activeItem.content}
                   </p>
                 </div>
@@ -106,15 +110,18 @@ const Homepage = () => {
             </div>
           </div>
         </div>
+
         <div className="mt-0 pb-16 mx-32 opacity-100 lg:hidden flex items-center justify-center min-h-screen">
           <HAccord items={items} />
         </div>
+
         <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center mb-16">
           {routes.map((data, idx) =>
             idx === 0 ? null : <HomepageRouterCircles route={data} />
           )}
         </div>
       </div>
+
       <Footer />
     </>
   );

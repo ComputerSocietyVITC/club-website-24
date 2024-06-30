@@ -7,7 +7,6 @@ import Projects from "./pages/projects";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Team from "./pages/team";
 import Blogs from "./pages/blogs";
-
 function App() {
   return (
     <BrowserRouter>
