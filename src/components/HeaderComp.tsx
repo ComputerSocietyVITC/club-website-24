@@ -15,7 +15,7 @@ const HeaderComp: React.FC = () => {
     };
 
     return (
-        <header className={`w-screen text-white absolute z-50 bg-transparent`}>
+        <header className={`w-screen text-white z-50 bg-transparent`}>
             {isOpen && (
                 <section
                     onClick={handleClick}

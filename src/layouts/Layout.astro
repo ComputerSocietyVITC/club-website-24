@@ -36,65 +36,68 @@ import "@fontsource/montserrat/900.css";
         />
         <title>IEEE Computer Society - VITC</title>
     </head>
+   
+    </section>
     <body>
-        <slot>Base Layout</slot>
+        <slot />
     </body>
+    <style is:global>
+        :root {
+            --accent-from: #091b1c; /* Updated color */
+            --accent-to: #02020b; /* Updated color */
+            --accent-to2: #080225;
+            --accent-gradient: linear-gradient(
+                to bottom,
+                var(--accent-from),
+                /* Start color at 50% */ var(--accent-to),
+                /* Middle color at 70% */ var(--accent-to2)
+                    /* End color at 100% */
+            );
+        }
+
+        html {
+            background-color: black;
+            cursor: url("/assets/cursor.svg"), auto;
+        }
+
+        body {
+            background-color: transparent;
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none; /* Firefox */
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .custom-underline {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .custom-underline::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #10b981;
+            transition:
+                width 0.3s ease-in-out,
+                left 0.3s ease-in-out;
+        }
+
+        .custom-underline:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+
+
 </html>
-<style is:global>
-    :root {
-        --accent-from: #091b1c; /* Updated color */
-        --accent-to: #02020b; /* Updated color */
-        --accent-to2: #080225;
-        --accent-gradient: linear-gradient(
-            to bottom,
-            var(--accent-from),
-            /* Start color at 50% */ var(--accent-to),
-            /* Middle color at 70% */ var(--accent-to2) /* End color at 100% */
-        );
-    }
-
-    html {
-        background-image: var(--accent-gradient);
-        background-color: var(
-            --accent-from
-        ); /* Updated to match the start color of the gradient */
-        cursor: url("/assets/cursor.svg"), auto;
-    }
-
-    body {
-        -ms-overflow-style: none; /* Internet Explorer 10+ */
-        scrollbar-width: none; /* Firefox */
-        scroll-behavior: smooth;
-    }
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    * {
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .custom-underline {
-        position: relative;
-        text-decoration: none;
-    }
-
-    .custom-underline::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: #10b981;
-        transition:
-            width 0.3s ease-in-out,
-            left 0.3s ease-in-out;
-    }
-
-    .custom-underline:hover::after {
-        width: 100%;
-        left: 0;
-    }
-</style>

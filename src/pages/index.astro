@@ -8,9 +8,22 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout>
-    <main>
+    <section
+        class="-z-[500] h-[50vh] w-[50vh] bg-[#284fff63] rounded-3xl top-[65vh] left-[65vw] absolute"
+    >
+    </section>
+    <section
+        class="-z-[500] h-[50vh] w-[50vh] bg-[#28ffea43] rounded-[100%] top-[5vh] left-[5vw] absolute"
+    >
+    </section>
+    <section
+        class="-z-[500] h-[50vh] w-[50vh] bg-[#a928ff75] rounded-[100%] top-[155vh] left-[5vw] absolute"
+    >
+    </section>
+    <main class="backdrop-blur-[10vw]">
         {/*<Splashscreen client:load />*/}
         <Header />
+
         <Homescreen />
         <Blog />
 
