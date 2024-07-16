@@ -75,7 +75,7 @@ const Events = () => {
                 </div>
                 <div className="rounded-[24px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 w-auto h-auto shadow-2xl shadow-[#7ac4ec]/30 mt-4">
                   <div className="rounded-[calc(24px-1px)] p-8 bg-gradient-to-b w-full from-[#061b24] from-2% via-[#072031] to-[#000b11] to-9% h-full flex flex-col justify-between text-center text-white max-w-[700px]">
-                    <h2 className="text-[5vw] text-b_col3 font-semibold mb-2">
+                    <h2 className="text-[4vw] text-b_col3 font-semibold mb-2">
                       {eventData[slide.eventName]?.title}
                     </h2>
                     <p className="text-[2.5vw]">
@@ -123,7 +123,7 @@ const Events = () => {
                     />
                     <div className="rounded-[36px] p-0.5 bg-gradient-to-b flex justify-center from-b_col3 to-b_col4 h-auto lg:w-[500px] shadow-2xl shadow-[#7ac4ec]/30">
                       <div className="rounded-[calc(36px-1px)] p-12 h-auto bg-gradient-to-b w-full from-[#061b24] via-[#072031] to-[#000b11] flex flex-col text-center text-white max-w-[559px]">
-                        <h2 className="text-[4vh] lg:text-[5vh] xl:text-[6vh] text-b_col3 font-semibold mb-4">
+                        <h2 className="text-[4vh] lg:text-[4vh] xl:text-[5vh] text-b_col3 font-semibold mb-4">
                           {eventData[slide.eventName]?.title}
                         </h2>
                         <p className="text-[1.6vh] lg:text-[1.75vh] xl:text-[2vh]">
