@@ -6,7 +6,7 @@ const myTeam = [
     name: "Harshit Kumar Singh",
     desig: "President",
     imageUrl:
-      "https://media.licdn.com/dms/image/D5603AQE2_l3d5veDlQ/profile-displayphoto-shrink_800_800/0/1718235524583?e=1724284800&v=beta&t=uBe9kO6a33Utep7y-jhMtu_bJmpsZUyb6ZRjYFAy_z8",
+      "https://media.licdn.com/dms/image/D5603AQFRwISnjTYSeQ/profile-displayphoto-shrink_800_800/0/1719988715088?e=1726704000&v=beta&t=3IMFNPh2hMf6k1oA2fA8mzbzj78w25C4tZeqtG5Qvcw",
     linkUrl: "https://www.linkedin.com/in/harshitkumarsingh25/",
     gitUrl: "https://github.com/harshitsinghcode",
   },
